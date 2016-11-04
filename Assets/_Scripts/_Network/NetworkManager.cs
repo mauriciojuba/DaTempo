@@ -13,6 +13,7 @@ using GooglePlayGames.BasicApi.Multiplayer;
 
 public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 {
+    public GameObject loginButtons, selectPlayerButtons;
     public Button Jogar;
     static NetworkManager sInstance = null;
     public static NetworkManager Instance
@@ -24,6 +25,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     }
     void Start()
     {
+        selectPlayerButtons.SetActive(false);
         Jogar.GetComponent<Button>().interactable = false;
         initializeLogTexts();
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
@@ -37,6 +39,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             {
                 GameObject.Find("LoginText").GetComponent<Text>().text = PlayGamesPlatform.Instance.localUser.userName;
                 Jogar.GetComponent<Button>().interactable = true;
+
             }
             else
             {
@@ -83,12 +86,16 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         if (success)
         {
+            GameObject.Find("ConnectingText").GetComponent<Text>().text = "Sala Criada";
+            GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Vamos Jogar!!";
+            GameObject.Find("LoginButtons").SetActive(true);
             jogadores = participantes();
             Jogadores.primeiroPlayerID = participantes().First().ParticipantId;
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
             //muda para cena da fase.
+            
         }
         else
         {
@@ -120,16 +127,51 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         //volta para cena.
     }
-
-    public void OnRealTimeMessageReceived(bool isReliable, string senderId, byte[] data)
-    {
-        //Do stuff
-    }
     void initializeLogTexts()
     {
         GameObject.Find("LoginText").GetComponent<Text>().text = "";
         GameObject.Find("LogText").GetComponent<Text>().text = "";
         GameObject.Find("ConnectingText").GetComponent<Text>().text = "";
         GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "";
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            selectPlayerButtons.SetActive(true);
+            loginButtons.SetActive(false);
+        }
+    }
+
+
+    public void OnRealTimeMessageReceived(bool isReliable, string senderId, byte[] data)
+    {
+        if(senderId == Jogadores.primeiroPlayerID)
+        {
+            switch (System.Text.Encoding.UTF8.GetString(data))
+            {
+                case "player1selected":
+                    GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Voce é o Player 2";
+                    break;
+                case "player2selected":
+                    GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Voce é o Player 1";
+                    break;
+            }
+        }
+        else if (senderId == Jogadores.segundoPlayerID)
+        {
+
+        }
+    }
+    public void pressedOne()
+    {
+        byte[] message = System.Text.Encoding.UTF8.GetBytes("player1selected");
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+    }
+    public void pressedTwo()
+    {
+        byte[] message = System.Text.Encoding.UTF8.GetBytes("player2selected");
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
 }
