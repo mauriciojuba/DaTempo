@@ -13,24 +13,34 @@ using GooglePlayGames.BasicApi.Multiplayer;
 
 public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 {
-    public GameObject loginButtons, selectPlayerButtons;
     public Button Jogar;
     static NetworkManager sInstance = null;
+    public MPUpdateListener updateListener;
+
+    private NetworkManager()
+    {
+        _updateMessage = new List<byte>(_updateMessageLength);
+    }
     public static NetworkManager Instance
     {
         get
         {
+            if (sInstance == null)
+            {
+                sInstance = new NetworkManager();
+            }
             return sInstance;
         }
     }
     void Start()
     {
-        selectPlayerButtons.SetActive(false);
         Jogar.GetComponent<Button>().interactable = false;
         initializeLogTexts();
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+        PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.Activate();
+        Login();
     }
     public void Login()
     {
@@ -86,16 +96,17 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         if (success)
         {
+
             GameObject.Find("ConnectingText").GetComponent<Text>().text = "Sala Criada";
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Vamos Jogar!!";
-            GameObject.Find("LoginButtons").SetActive(true);
             jogadores = participantes();
             Jogadores.primeiroPlayerID = participantes().First().ParticipantId;
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
-            //muda para cena da fase.
-            
+            SceneManager.LoadScene("PlayerSelect");
+
+
         }
         else
         {
@@ -135,33 +146,35 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "";
     }
 
-    void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            selectPlayerButtons.SetActive(true);
-            loginButtons.SetActive(false);
-        }
-    }
+    private byte _protocolVersion = 1;
+    // Byte + Byte + 2 floats for position + 2 floats for velcocity + 1 float for rotZ
+    private int _updateMessageLength = 3;
+    private List<byte> _updateMessage;
 
+    public void SendMyUpdate(byte message)
+    {
+        _updateMessage.Clear();
+        _updateMessage.Add(_protocolVersion);
+        _updateMessage.Add((byte)'U');
+        _updateMessage.Add(message);
+        byte[] messageToSend = _updateMessage.ToArray();
+        Debug.Log("Sending my update message  " + messageToSend + " to all players in the room");
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(false, messageToSend);
+    }
 
     public void OnRealTimeMessageReceived(bool isReliable, string senderId, byte[] data)
     {
-        if(senderId == Jogadores.primeiroPlayerID)
+        // We'll be doing more with this later...
+        byte messageVersion = (byte)data[0];
+        // Let's figure out what type of message this is.
+        char messageType = (char)data[1];
+        int actionNumber = (int)data[2];
+        if (messageType == 'U' && data.Length == _updateMessageLength)
         {
-            switch (System.Text.Encoding.UTF8.GetString(data))
+            if (updateListener != null)
             {
-                case "player1selected":
-                    GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Voce é o Player 2";
-                    break;
-                case "player2selected":
-                    GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Voce é o Player 1";
-                    break;
+                updateListener.UpdateReceived(actionNumber);
             }
-        }
-        else if (senderId == Jogadores.segundoPlayerID)
-        {
-
         }
     }
     public void pressedOne()
