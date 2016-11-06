@@ -15,12 +15,8 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 {
     public Button Jogar;
     static NetworkManager sInstance = null;
-    public MPUpdateListener updateListener;
 
-    private NetworkManager()
-    {
-        _updateMessage = new List<byte>(_updateMessageLength);
-    }
+   
     public static NetworkManager Instance
     {
         get
@@ -145,37 +141,12 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         GameObject.Find("ConnectingText").GetComponent<Text>().text = "";
         GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "";
     }
-
-    private byte _protocolVersion = 1;
-    // Byte + Byte + 2 floats for position + 2 floats for velcocity + 1 float for rotZ
-    private int _updateMessageLength = 3;
     private List<byte> _updateMessage;
-
-    public void SendMyUpdate(byte message)
-    {
-        _updateMessage.Clear();
-        _updateMessage.Add(_protocolVersion);
-        _updateMessage.Add((byte)'U');
-        _updateMessage.Add(message);
-        byte[] messageToSend = _updateMessage.ToArray();
-        Debug.Log("Sending my update message  " + messageToSend + " to all players in the room");
-        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(false, messageToSend);
-    }
 
     public void OnRealTimeMessageReceived(bool isReliable, string senderId, byte[] data)
     {
-        // We'll be doing more with this later...
-        byte messageVersion = (byte)data[0];
-        // Let's figure out what type of message this is.
-        char messageType = (char)data[1];
-        int actionNumber = (int)data[2];
-        if (messageType == 'U' && data.Length == _updateMessageLength)
-        {
-            if (updateListener != null)
-            {
-                updateListener.UpdateReceived(actionNumber);
-            }
-        }
+        string msg = System.Text.Encoding.Default.GetString(data);
+        GameObject.Find("Debug").GetComponent<Text>().text = "" + msg;
     }
     public void pressedOne()
     {
@@ -186,5 +157,9 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         byte[] message = System.Text.Encoding.UTF8.GetBytes("player2selected");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+    }
+    public void SendMessageToAll(bool reliable, byte[] _msg)
+    {
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(reliable, _msg);
     }
 }
