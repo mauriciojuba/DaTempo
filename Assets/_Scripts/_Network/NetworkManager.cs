@@ -100,7 +100,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
-            SceneManager.LoadScene("PlayerSelect");
+            SceneManager.LoadScene("LevelSelect");
 
 
         }
@@ -132,7 +132,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     }
     public void OnLeftRoom()
     {
-        //volta para cena.
+        SceneManager.LoadScene("MainMenu");
     }
     void initializeLogTexts()
     {
@@ -147,16 +147,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         string msg = System.Text.Encoding.Default.GetString(data);
         GameObject.Find("Debug").GetComponent<Text>().text = "" + msg;
-    }
-    public void pressedOne()
-    {
-        byte[] message = System.Text.Encoding.UTF8.GetBytes("player1selected");
-        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
-    }
-    public void pressedTwo()
-    {
-        byte[] message = System.Text.Encoding.UTF8.GetBytes("player2selected");
-        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
     public void SendMessageToAll(bool reliable, byte[] _msg)
     {
