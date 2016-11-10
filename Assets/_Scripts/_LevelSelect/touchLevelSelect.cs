@@ -2,9 +2,9 @@
 using System.Collections;
 using TouchScript;
 
-public class tapTabuleiro : MonoBehaviour
-{
-    public mudandoPecas controladorPecas;
+public class touchLevelSelect : MonoBehaviour {
+
+    public levelSelect _lvlSelect;
 
     private void OnEnable()
     {
@@ -25,7 +25,7 @@ public class tapTabuleiro : MonoBehaviour
     private void spawnPrefabAt(string nameObject)
     {
         //nome do script que controlara o touch
-        controladorPecas.click(nameObject);
+        _lvlSelect.click(nameObject);
     }
 
     private void touchesBeganHandler(object sender, TouchEventArgs e)

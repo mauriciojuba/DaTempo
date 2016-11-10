@@ -100,7 +100,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
-            SceneManager.LoadScene("LevelSelect");
+            SceneManager.LoadScene("PlayerSelect");
 
 
         }
