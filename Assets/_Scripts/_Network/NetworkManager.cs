@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GooglePlayGames;
@@ -146,7 +144,27 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     public void OnRealTimeMessageReceived(bool isReliable, string senderId, byte[] data)
     {
         string msg = System.Text.Encoding.Default.GetString(data);
-        GameObject.Find("Debug").GetComponent<Text>().text = "" + msg;
+        switch(msg)
+        {
+            #region Player Selection
+            case "escolheuPlayer1":
+                GameObject.Find("Main Camera").GetComponent<InteractionPlayers>().sobrouDois();
+                break;
+            case "escolheuPlayer2":
+                GameObject.Find("Main Camera").GetComponent<InteractionPlayers>().sobrouUm();
+                break;
+            case "resetSelectPlayer":
+                GameObject.Find("Main Camera").GetComponent<InteractionPlayers>().noPlayAll();
+                break;
+            case "okSelectPlayer":
+                GameObject.Find("Main Camera").GetComponent<InteractionPlayers>().yesPlayAll();
+                break;
+            #endregion
+            #region Level Selection
+            case "seila":
+                break;
+            #endregion
+        }
     }
     public void SendMessageToAll(bool reliable, byte[] _msg)
     {

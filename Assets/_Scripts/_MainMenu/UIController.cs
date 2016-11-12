@@ -76,10 +76,7 @@ public class UIController : MonoBehaviour {
         }
         else
         {
-            if (currentScene == "LevelSelect")
-            {
-                PlayGamesPlatform.Instance.RealTime.LeaveRoom();
-            }
+            PlayGamesPlatform.Instance.RealTime.LeaveRoom();
         }
     }
     public void No()
@@ -93,7 +90,7 @@ public class UIController : MonoBehaviour {
         {
             btnCenaAnterior.SetActive(false);
         }
-        if (currentScene == "LevelSelect")
+        else
         {
             cenaAnteriorText.text = "MENU INICIAL";
 
