@@ -161,9 +161,19 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
                 break;
             #endregion
             #region Level Selection
-            case "seila":
+            case "resetSelectLevel":
+                GameObject.Find("Main Camera").GetComponent<InteractionLevels>().resetSelectionAll();
                 break;
-            #endregion
+            case "nextSelectLevel":
+                GameObject.Find("Main Camera").GetComponent<InteractionLevels>()._nextAll();
+                break;
+            case "prevSelectLevel":
+                GameObject.Find("Main Camera").GetComponent<InteractionLevels>()._prevAll();
+                break;
+            case "okSelectLevel":
+                GameObject.Find("Main Camera").GetComponent<InteractionLevels>().YesAll();
+                break;
+                #endregion
         }
     }
     public void SendMessageToAll(bool reliable, byte[] _msg)
