@@ -18,6 +18,7 @@ public class InteractionLevels : MonoBehaviour {
         aguardando.SetActive(false);
         areyousure.SetActive(false);
         resetSelectionAll();
+        splitScreens();
     }
     void resetSelection()
     {
@@ -30,6 +31,7 @@ public class InteractionLevels : MonoBehaviour {
         index = 0;
         tela.sprite = _lvlSprite[index];
         PrevBtn.interactable = false;
+        NextBtn.interactable = true;
         areyousure.SetActive(false);
     }
 
@@ -54,8 +56,8 @@ public class InteractionLevels : MonoBehaviour {
     }
     public void _prevAll()
     {
-        PrevBtn.interactable = true;
-        NextBtn.interactable = false;
+        PrevBtn.interactable = false;
+        NextBtn.interactable = true;
         index--;
         tela.sprite = _lvlSprite[index];
     }
@@ -65,9 +67,9 @@ public class InteractionLevels : MonoBehaviour {
     }
     public void Yes()
     {
-        YesAll();
         byte[] message = System.Text.Encoding.UTF8.GetBytes("okSelectLevel");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+        YesAll();
     }
     public void YesAll()
     {
