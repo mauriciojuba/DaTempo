@@ -11,7 +11,7 @@ using GooglePlayGames.BasicApi.Multiplayer;
 
 public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 {
-    public Button Jogar;
+    public GameObject JogarOff;
     static NetworkManager sInstance = null;
 
    
@@ -28,7 +28,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     }
     void Start()
     {
-        Jogar.GetComponent<Button>().interactable = false;
         initializeLogTexts();
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
         PlayGamesPlatform.DebugLogEnabled = true;
@@ -42,7 +41,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             if (sucess)
             {
                 GameObject.Find("LoginText").GetComponent<Text>().text = PlayGamesPlatform.Instance.localUser.userName;
-                Jogar.GetComponent<Button>().interactable = true;
+                JogarOff.SetActive(false);
 
             }
             else
@@ -98,7 +97,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
-            SceneManager.LoadScene("LevelSelect");
+            SceneManager.LoadScene("Fase1A");
 
 
         }
@@ -173,7 +172,18 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "okSelectLevel":
                 GameObject.Find("Main Camera").GetComponent<InteractionLevels>().YesAll();
                 break;
-                #endregion
+            #endregion
+            #region Emojis
+            case "happyEmoji":
+                GameObject.Find("xTella").GetComponent<EmojisController>().RecebeHappy();
+                break;
+            case "s2Emoji":
+                GameObject.Find("xTella").GetComponent<EmojisController>().Recebes2();
+                break;
+            case "amazedEmoji":
+                GameObject.Find("xTella").GetComponent<EmojisController>().RecebeAmazed();
+                break;
+            #endregion
         }
     }
     public void SendMessageToAll(bool reliable, byte[] _msg)
