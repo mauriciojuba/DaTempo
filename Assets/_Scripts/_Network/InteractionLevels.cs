@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using GooglePlayGames;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionLevels : MonoBehaviour {
 
@@ -73,7 +74,7 @@ public class InteractionLevels : MonoBehaviour {
     }
     public void YesAll()
     {
-        //próxima cena
+        SceneManager.LoadScene("PlayerSelect");
         
     }
     public void No()

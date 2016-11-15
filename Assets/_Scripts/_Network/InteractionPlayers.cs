@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using GooglePlayGames;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionPlayers : MonoBehaviour {
 
@@ -17,9 +18,7 @@ public class InteractionPlayers : MonoBehaviour {
 
 
 
-    //apagardps
-    public Text finalText;
-    public GameObject final;
+    
     
     
     void Start()
@@ -34,9 +33,7 @@ public class InteractionPlayers : MonoBehaviour {
         isDouglas = false;
         splitScreens();
 
-
-        //apagardps
-        final.SetActive(false);
+        
     }
 
     public void escolheUm()
@@ -99,19 +96,17 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void yesPlay()
     {
-        //inicia cutscene
+        SceneManager.LoadScene("Fase1A");
         byte[] message = System.Text.Encoding.UTF8.GetBytes("okSelectPlayer");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
 
-        //apagardps
-        TESTEFINAL();
+        
     }
     public void yesPlayAll()
     {
-        //inicia cutscene
+        SceneManager.LoadScene("Fase1A");
 
-        //apagardps
-        TESTEFINAL();
+
     }
 
     void splitScreens()
@@ -146,17 +141,5 @@ public class InteractionPlayers : MonoBehaviour {
 
 
 
-    //apagardps
-    void TESTEFINAL()
-    {
-        final.SetActive(true);
-        if (isAntonio)
-        {
-            finalText.text = "ANTONIO";
-        }
-        else if (isDouglas)
-        {
-            finalText.text = "DOUGLAS";
-        }
-    }
+    
 }
