@@ -193,7 +193,6 @@ public class mudandoPecas : MonoBehaviour {
         if (_a && _b && _c && _d)
         {
             my_combination = "" + a + b + c + d;
-            Debug.Log(my_combination);
             checkCombination();
             
         }
@@ -207,7 +206,6 @@ public class mudandoPecas : MonoBehaviour {
     }
     void generatePuzzle(int numPuzzle)
     {
-        Debug.Log("puzzle: " + numPuzzle);
         
         Pista.sprite = pistas[numPuzzle];
         switch (numPuzzle)
@@ -261,15 +259,14 @@ public class mudandoPecas : MonoBehaviour {
                 ot_combination = "15-11112";
                 break;
         }
-        Debug.Log("Comb: " + combination);
     }
     public void restartPuzzle()
     {
-        SceneManager.LoadScene("1_D");
+        
     }
     public void quitPuzzle()
     {
-        SceneManager.LoadScene("MainMenu");
+        
         
     }
 }
