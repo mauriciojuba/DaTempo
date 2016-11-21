@@ -19,8 +19,6 @@ public class mudandoPecas : MonoBehaviour {
     int combinationNum;
     string combination, my_combination, ot_combination;
     public InteractionPuzzleA _netCom;
-    public Text DebugComb;
-    public Button test;
 
     void Start()
     {
@@ -201,7 +199,6 @@ public class mudandoPecas : MonoBehaviour {
         if (_a && _b && _c && _d)
         {
             my_combination = "" + a + b + c + d;
-            DebugComb.text = my_combination;
             checkCombination();
             
         }
@@ -214,7 +211,8 @@ public class mudandoPecas : MonoBehaviour {
         }
         else
         {
-            //CAUSA O VAPOR NA TELA DO OUTRO JOGADOR.
+            _netCom.vapor();
+            Limpar();
             //RETIRA UMA DAS 3 CHANCES.
         }
     }

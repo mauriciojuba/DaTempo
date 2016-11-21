@@ -14,6 +14,7 @@ public class mudandoGemas : MonoBehaviour {
     string _A, _B, _C, _D;
     bool _a, _b, _c, _d;
     public InteractionPuzzleA _netCom;
+    public GameObject finalInteraction;
 
 
     void Start () {
@@ -24,27 +25,18 @@ public class mudandoGemas : MonoBehaviour {
     void randomizaEmblema()
     {
         float random = Random.Range(0, 3);
-        if (random < 1) emblem.sprite = sol;
-        else if (random < 2) emblem.sprite = lua;
-        else emblem.sprite = estrela;
-        createCombination((int)random);
-    }
-    void createCombination(int combIndex)
-    {
-        switch (combIndex)
+        if (random < 1)
         {
-            case 0:
-                combination = "PBGR";
-                break;
-            case 1:
-                combination = "PBGR";
-                break;
-            case 2:
-                combination = "RGPB";
-                break;
-            case 3:
-                combination = "BGRP";
-                break;
+            emblem.sprite = sol;
+            combination = "PBGR";
+        }
+        else if(random < 2) {
+            emblem.sprite = lua;
+            combination = "RGPB";
+        }
+        else {
+            emblem.sprite = estrela;
+            combination = "BGRP";
         }
     }
     public void click(string obj)
@@ -134,14 +126,16 @@ public class mudandoGemas : MonoBehaviour {
             {
                 LimpaGemas();
                 //som de erro
-                //liga o vapor na outra tela
+                _netCom.vapor();
                 //perde vida
             }
         }
     }
     void Completed()
     {
-        //abre o compartimento com a energia
+        finalInteraction.SetActive(true);
+        tapTabuleiro.puzzleAtivo = 2;
+        this.gameObject.SetActive(false);
     }
     void LimpaGemas()
     {

@@ -3,8 +3,7 @@ using System.Collections;
 using TouchScript;
 
 public class tapPistas : MonoBehaviour {
-
-    public Pistas controladorPistas;
+    
 
     private void OnEnable()
     {
@@ -25,7 +24,6 @@ public class tapPistas : MonoBehaviour {
     private void spawnPrefabAt(string nameObject)
     {
         Debug.Log(nameObject);
-        controladorPistas.click(nameObject);
     }
 
     private void touchesBeganHandler(object sender, TouchEventArgs e)

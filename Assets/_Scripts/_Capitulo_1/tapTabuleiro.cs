@@ -6,6 +6,8 @@ public class tapTabuleiro : MonoBehaviour
 {
     public mudandoPecas controladorPecas;
     public mudandoGemas controladorGemas;
+    public energyCollect energycollect;
+    public canoVapor pipe;
     public static int puzzleAtivo;
     void Start()
     {
@@ -30,6 +32,10 @@ public class tapTabuleiro : MonoBehaviour
 
     private void spawnPrefabAt(string nameObject)
     {
+        if(nameObject == "ConsertaPipe")
+        {
+            pipe.click(nameObject);
+        }
         //nome do script que controlara o touch
         if (puzzleAtivo == 0)
         {
@@ -38,6 +44,10 @@ public class tapTabuleiro : MonoBehaviour
         if(puzzleAtivo == 1)
         {
             controladorGemas.click(nameObject);
+        }
+        if (puzzleAtivo == 2)
+        {
+            energycollect.click(nameObject);
         }
     }
 

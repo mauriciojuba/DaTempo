@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b7856bc5406adb5459371cbd96b2dd81
-timeCreated: 1479695855
+guid: da62048f19e25d748bd7bd09518e0e6b
+timeCreated: 1479710699
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -27,7 +27,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 512
+  maxTextureSize: 256
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -44,7 +44,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 190
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8

@@ -188,6 +188,12 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "startPuzzleB":
                 GameObject.Find("Main Camera").GetComponent<InteractionPuzzleA>().StartPuzzle2All();
                 break;
+            case "nextStageA":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleA>().nextStageAll();
+                break;
+            case "ligaVapor":
+                GameObject.Find("Jogador B Pipe").GetComponent<canoVapor>().soltaVapor();
+                break;
                 #endregion
         }
     }
