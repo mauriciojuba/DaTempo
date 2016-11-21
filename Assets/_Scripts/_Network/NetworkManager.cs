@@ -184,6 +184,11 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
                 GameObject.Find("xTella").GetComponent<EmojisController>().RecebeAmazed();
                 break;
             #endregion
+            #region PuzzleA
+            case "startPuzzleB":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleA>().StartPuzzle2All();
+                break;
+                #endregion
         }
     }
     public void SendMessageToAll(bool reliable, byte[] _msg)

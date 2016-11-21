@@ -5,6 +5,12 @@ using TouchScript;
 public class tapTabuleiro : MonoBehaviour
 {
     public mudandoPecas controladorPecas;
+    public mudandoGemas controladorGemas;
+    public static int puzzleAtivo;
+    void Start()
+    {
+        puzzleAtivo = 0;
+    }
 
     private void OnEnable()
     {
@@ -25,7 +31,14 @@ public class tapTabuleiro : MonoBehaviour
     private void spawnPrefabAt(string nameObject)
     {
         //nome do script que controlara o touch
-        controladorPecas.click(nameObject);
+        if (puzzleAtivo == 0)
+        {
+            controladorPecas.click(nameObject);
+        }
+        if(puzzleAtivo == 1)
+        {
+            controladorGemas.click(nameObject);
+        }
     }
 
     private void touchesBeganHandler(object sender, TouchEventArgs e)

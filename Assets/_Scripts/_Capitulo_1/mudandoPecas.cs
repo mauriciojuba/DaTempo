@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class mudandoPecas : MonoBehaviour {
 
     public SpriteRenderer oneOne, oneTwo, twoOne, twoTwo;
-    public Color ok, red, green;
+    public Color ok, red, green, blank;
+    public Sprite emBranco;
     public Sprite[] pecas;
     public SpriteRenderer pecaEsquerda, pecaSelecionada, pecaDireita;
     public GameObject PainelAviso, PainelFimDeJogo;
@@ -16,6 +18,9 @@ public class mudandoPecas : MonoBehaviour {
     int spaceSelected = 0, indiceSprite;
     int combinationNum;
     string combination, my_combination, ot_combination;
+    public InteractionPuzzleA _netCom;
+    public Text DebugComb;
+    public Button test;
 
     void Start()
     {
@@ -50,6 +55,9 @@ public class mudandoPecas : MonoBehaviour {
                 break;
             case "PecaDaVez":
                 posicionarPeca();
+                break;
+            case "Limpar":
+                Limpar();
                 break;
         }
     }
@@ -193,16 +201,26 @@ public class mudandoPecas : MonoBehaviour {
         if (_a && _b && _c && _d)
         {
             my_combination = "" + a + b + c + d;
+            DebugComb.text = my_combination;
             checkCombination();
             
         }
     }
-    void checkCombination()
+    public void checkCombination()
     {
         if(my_combination == combination || my_combination == ot_combination)
         {
-            PainelFimDeJogo.SetActive(true);
+            _netCom.StartPuzzle2();
         }
+        else
+        {
+            //CAUSA O VAPOR NA TELA DO OUTRO JOGADOR.
+            //RETIRA UMA DAS 3 CHANCES.
+        }
+    }
+    public void Test()
+    {
+        _netCom.StartPuzzle2();
     }
     void generatePuzzle(int numPuzzle)
     {
@@ -236,7 +254,7 @@ public class mudandoPecas : MonoBehaviour {
                 break;
             case 6:
                 combination = "1514-113";
-                ot_combination = "151416113";
+                ot_combination = "15141613";
                 break;
             case 7:
                 combination = "11910-1";
@@ -259,6 +277,21 @@ public class mudandoPecas : MonoBehaviour {
                 ot_combination = "15-11112";
                 break;
         }
+    }
+    public void Limpar()
+    {
+        oneOne.sprite = emBranco;
+        oneTwo.sprite = emBranco;
+        twoOne.sprite = emBranco;
+        twoTwo.sprite = emBranco;
+        oneOne.color = blank;
+        oneTwo.color = blank;
+        twoOne.color = blank;
+        twoTwo.color = blank;
+        _a = false;
+        _b = false;
+        _c = false;
+        _d = false;
     }
     public void restartPuzzle()
     {
