@@ -12,7 +12,7 @@ public class InteractionLevels : MonoBehaviour {
     public Button PrevBtn, NextBtn;
     public Image tela;
     public Sprite[] _lvlSprite;
-    int index;
+    public static int index;
 
     void Start () {
         selecaoDeFase.SetActive(false);

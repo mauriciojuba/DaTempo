@@ -96,7 +96,14 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void yesPlay()
     {
-        SceneManager.LoadScene("Fase1A");
+        if (InteractionLevels.index == 0)
+        {
+            SceneManager.LoadScene("Fase1A");
+        }
+        else if(InteractionLevels.index == 1)
+        {
+            SceneManager.LoadScene("Fase2A");
+        }
         byte[] message = System.Text.Encoding.UTF8.GetBytes("okSelectPlayer");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
 
@@ -104,9 +111,14 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void yesPlayAll()
     {
-        SceneManager.LoadScene("Fase1A");
-
-
+        if (InteractionLevels.index == 0)
+        {
+            SceneManager.LoadScene("Fase1A");
+        }
+        else if (InteractionLevels.index == 1)
+        {
+            SceneManager.LoadScene("Fase2A");
+        }
     }
 
     void splitScreens()

@@ -29,9 +29,7 @@ public class ControladorDeFusil : MonoBehaviour {
 				for (int a = 0; a < fusil.Length; a++) {
 					
 					if (fusil [a].GetComponent<FioSnap> ().Select == true)
-						fusil [a].transform.localPosition = plug [i].transform.localPosition;
-					
-			
+						fusil [a].transform.localPosition = plug [i].transform.localPosition;			
 				}
 			}
 		}

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+    public InteractionPuzzleB _unet;
+
 	int[] Checklist = new int[3];
 	public string[] CurrentButtons = new string[] {"None","None","None"};
 	public string[] RightButtons = new string[] {"Check","Check","Check"};
@@ -49,10 +51,12 @@ public class GameManager : MonoBehaviour {
 		}
 		for (int i = 0; i < CurrentButtons.Length; i++) {
 			if(CurrentButtons[i].Equals("Wrong")){
-				return("Wrong");
+                _unet._graxa();
+                return ("Wrong");
 			}
 		}
-		//Colocar função de concluir o puzzle aqui.
+        _unet.received_closeDoor();
+        _unet.lightON();
 		return("Correct");
 
 

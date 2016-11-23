@@ -10,7 +10,9 @@ public class tapPistas_Cap2 : MonoBehaviour {
     {
         if (TouchManager.Instance != null)
         {
-            TouchManager.Instance.TouchesMoved += touchesBeganHandler;
+            TouchManager.Instance.TouchesBegan += touchesBeganHandler;
+            TouchManager.Instance.TouchesMoved += touchesMoveHandler;
+            TouchManager.Instance.TouchesEnded += touchesEndedHandler;
         }
     }
 
@@ -18,7 +20,9 @@ public class tapPistas_Cap2 : MonoBehaviour {
     {
         if (TouchManager.Instance != null)
         {
-            TouchManager.Instance.TouchesMoved -= touchesBeganHandler;
+            TouchManager.Instance.TouchesBegan -= touchesBeganHandler;
+            TouchManager.Instance.TouchesMoved -= touchesMoveHandler;
+            TouchManager.Instance.TouchesEnded -= touchesEndedHandler;
         }
     }
 
@@ -27,12 +31,35 @@ public class tapPistas_Cap2 : MonoBehaviour {
         Debug.Log(nameObject);
         capitulo2.click(nameObject);
     }
+    private void spawn(string nameObject)
+    {
+        if (nameObject != "LimpaSujeira")
+        {
+            capitulo2.click(nameObject);
+        }
+    }
 
-    private void touchesBeganHandler(object sender, TouchEventArgs e)
+    private void touchesMoveHandler(object sender, TouchEventArgs e)
     {
         foreach (var point in e.Touches)
         {
             spawnPrefabAt(point.Hit.RaycastHit2D.collider.gameObject.name);
         }
     }
+    private void touchesEndedHandler(object sender, TouchEventArgs e)
+    {
+        foreach (var point in e.Touches)
+        {
+            capitulo2.soltou();
+            Debug.Log("soltou");
+        }
+    }
+    private void touchesBeganHandler(object sender, TouchEventArgs e)
+    {
+        foreach (var point in e.Touches)
+        {
+            spawn(point.Hit.RaycastHit2D.collider.gameObject.name);
+        }
+    }
+
 }

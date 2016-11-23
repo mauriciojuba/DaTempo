@@ -194,6 +194,20 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "ligaVapor":
                 GameObject.Find("Jogador B Pipe").GetComponent<canoVapor>().soltaVapor();
                 break;
+            #endregion
+            #region PuzzleB
+            case "Graxa":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().espirraGraxa();
+                break;
+            case "LightON":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().received_lightON();
+                break;
+            case "openDoor":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().received_openDoor();
+                break;
+            case "closeDoor":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().received_closeDoor();
+                break;
                 #endregion
         }
     }
