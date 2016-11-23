@@ -10,7 +10,7 @@ public class FioSnap : MonoBehaviour {
 
 	public GameObject SelectVisualizer;
 
-	private Vector3 PosInicial;
+	public Vector3 PosInicial;
 
 	public bool Select = false;
 

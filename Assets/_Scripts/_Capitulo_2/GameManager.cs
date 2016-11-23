@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour {
 	int[] Checklist = new int[3];
 	public string[] CurrentButtons = new string[] {"None","None","None"};
 	public string[] RightButtons = new string[] {"Check","Check","Check"};
+
+	public GameObject[] Fusiveis;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -51,6 +54,7 @@ public class GameManager : MonoBehaviour {
 		}
 		for (int i = 0; i < CurrentButtons.Length; i++) {
 			if(CurrentButtons[i].Equals("Wrong")){
+				Reset ();
                 _unet._graxa();
                 return ("Wrong");
 			}
@@ -61,5 +65,16 @@ public class GameManager : MonoBehaviour {
 
 
 
+	}
+
+	public void Reset(){
+		for (int i = 0; i < CurrentButtons.Length; i++) { 
+			CurrentButtons[i] = "None";
+		}
+
+		for (int i = 0; i < Fusiveis.Length; i++) { 
+			Fusiveis [i].GetComponent<FioSnap> ().transform.position = Fusiveis [i].GetComponent<FioSnap> ().PosInicial;
+
+		}
 	}
 }
