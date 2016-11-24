@@ -15,8 +15,10 @@ public class mudandoGemas : MonoBehaviour {
     bool _a, _b, _c, _d;
     public InteractionPuzzleA _netCom;
     public GameObject finalInteraction;
-
+    public mudandoPecas puzzle1;
     public AudioManager Effect;
+    public GameObject vida1, vida2, vida3;
+    int lifeCount;
 
 
     void Start () {
@@ -24,6 +26,10 @@ public class mudandoGemas : MonoBehaviour {
         LimpaSelecao();
         randomizaEmblema();
 	}
+    void OnEnable() {
+
+        lifeCount = puzzle1.lifecount;
+    }
     void randomizaEmblema()
     {
         float random = Random.Range(0, 3);
@@ -34,11 +40,11 @@ public class mudandoGemas : MonoBehaviour {
         }
         else if(random < 2) {
             emblem.sprite = lua;
-            combination = "RGPB";
+            combination = "BGRP";
         }
         else {
             emblem.sprite = estrela;
-            combination = "BGRP";
+            combination = "RGPB";
         }
     }
     public void click(string obj)
@@ -132,9 +138,31 @@ public class mudandoGemas : MonoBehaviour {
                 LimpaGemas();
                 //som de erro
                 _netCom.vapor();
-                //perde vida
+                lifeCount--;
+                switch (lifeCount)
+                {
+                    case -1:
+                        Invoke("LevelSelect", 0.5f);
+                        break;
+                    case 0:
+                        vida3.SetActive(false);
+                        vida2.SetActive(false);
+                        vida1.SetActive(false);
+                        break;
+                    case 1:
+                        vida3.SetActive(false);
+                        vida2.SetActive(false);
+                        break;
+                    case 2:
+                        vida3.SetActive(false);
+                        break;
+                }
             }
         }
+    }
+    void LevelSelect()
+    {
+        _netCom.levelStage();
     }
     void Completed()
     {

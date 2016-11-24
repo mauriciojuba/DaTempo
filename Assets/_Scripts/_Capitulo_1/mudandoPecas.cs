@@ -19,6 +19,8 @@ public class mudandoPecas : MonoBehaviour {
     int combinationNum;
     string combination, my_combination, ot_combination;
     public InteractionPuzzleA _netCom;
+    public GameObject vida1,vida2,vida3;
+    public int lifecount;
 
     public AudioManager Effect;
 
@@ -28,7 +30,12 @@ public class mudandoPecas : MonoBehaviour {
         rolagemSprites(0);
         PainelAviso.SetActive(false);
         PainelFimDeJogo.SetActive(false);
-        
+        vida1.SetActive(true);
+        vida2.SetActive(true);
+        vida3.SetActive(true);
+        lifecount = 3;
+
+
     }
 
 	public void click(string name)
@@ -217,10 +224,33 @@ public class mudandoPecas : MonoBehaviour {
         }
         else
         {
+            lifecount--;
+            switch (lifecount)
+            {
+                case -1:
+                    Invoke("LevelSelect", 0.5f);
+                    break;
+                case 0:
+                    vida3.SetActive(false);
+                    vida2.SetActive(false);
+                    vida1.SetActive(false);
+                    break;
+                case 1:
+                    vida3.SetActive(false);
+                    vida2.SetActive(false);
+                    break;
+                case 2:
+                    vida3.SetActive(false);
+                    break;
+            }
             _netCom.vapor();
             Limpar();
             //RETIRA UMA DAS 3 CHANCES.
         }
+    }
+    public void LevelSelect()
+    {
+        _netCom.levelStage();
     }
     public void Test()
     {

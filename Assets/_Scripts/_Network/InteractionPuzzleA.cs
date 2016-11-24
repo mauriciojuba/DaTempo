@@ -28,6 +28,25 @@ public class InteractionPuzzleA : MonoBehaviour {
     {
         SceneManager.LoadScene("Fase2A");
     }
+    public void diminuiVida()
+    {
+        byte[] message = System.Text.Encoding.UTF8.GetBytes("levelStage");
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+    }
+    public void VidaMenos()
+    {
+        _pipe.GetComponent<canoVapor>().diminuiVida();
+    }
+    public void levelStage()
+    {
+        byte[] message = System.Text.Encoding.UTF8.GetBytes("levelStage");
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+        levelStageAll();
+    }
+    public void levelStageAll()
+    {
+        SceneManager.LoadScene("LevelStage");
+    }
     public void vapor()
     {
         byte[] message = System.Text.Encoding.UTF8.GetBytes("ligaVapor");

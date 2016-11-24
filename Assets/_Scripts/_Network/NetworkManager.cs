@@ -206,8 +206,14 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "nextStageA":
                 GameObject.Find("Main Camera").GetComponent<InteractionPuzzleA>().nextStageAll();
                 break;
+            case "levelStage":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleA>().levelStageAll();
+                break;
             case "ligaVapor":
                 GameObject.Find("Jogador B Pipe").GetComponent<canoVapor>().soltaVapor();
+                break;
+            case "diminuiVida":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleA>().VidaMenos();
                 break;
             #endregion
             #region PuzzleB
