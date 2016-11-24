@@ -7,14 +7,11 @@ public class FioSnap : MonoBehaviour {
 	private TransformGesture Tc;
 	public int Numero;
 	public GameObject[] Entrada;
-
 	public GameObject SelectVisualizer;
-
 	public Vector3 PosInicial;
-
 	public bool Select = false;
-
 	bool BusySlot;
+
 
 
 	// Use this for initialization

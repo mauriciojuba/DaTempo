@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject[] Fusiveis;
 
+    public AudioManager Effect;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,25 +24,29 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void AddCheck(int Number){
+        Effect.playSound("ColocaFusivel");
 		print("Funfa vem " + Number);
 		CurrentButtons[Number] = "Check";
 		print (Check ());
 	}
 
 	public void RemoveCheck(int Number){
-		print ("Saiu " + Number);
+        Effect.playSound("TiraFusivel");
+        print ("Saiu " + Number);
 		CurrentButtons[Number] = "None";
 		print (Check ());
 	}
 
 	public void AddWrong(int Number){
-		print ("Ta errado "+ Number);
+        Effect.playSound("ColocaFusivel");
+        print ("Ta errado "+ Number);
 		CurrentButtons [Number] = "Wrong";
 		print (Check ());
 	}
 
 	public void RemoveWrong(int Number){
-		print("saiu do errado " + Number);
+        Effect.playSound("TiraFusivel");
+        print("saiu do errado " + Number);
 		CurrentButtons [Number] = "None";
 		print (Check ());
 	}
@@ -54,11 +60,13 @@ public class GameManager : MonoBehaviour {
 		}
 		for (int i = 0; i < CurrentButtons.Length; i++) {
 			if(CurrentButtons[i].Equals("Wrong")){
+                Effect.playSound("PainelErro");
 				Reset ();
                 _unet._graxa();
                 return ("Wrong");
 			}
 		}
+        Effect.playSound("PainelAcerto");
         _unet.received_closeDoor();
         _unet.lightON();
 		return("Correct");

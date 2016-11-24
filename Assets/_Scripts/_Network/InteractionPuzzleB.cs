@@ -11,6 +11,7 @@ public class InteractionPuzzleB : MonoBehaviour {
     public AbrePorta _open;
 
 	public AudioManager Music;
+    public AudioManager Effect;
 
     void Start () {
         splitscreen();
@@ -37,6 +38,7 @@ public class InteractionPuzzleB : MonoBehaviour {
     }
     public void _graxa()
     {
+        Effect.playSound("GrachaEspirrando");
         byte[] message = System.Text.Encoding.UTF8.GetBytes("Graxa");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
@@ -46,6 +48,7 @@ public class InteractionPuzzleB : MonoBehaviour {
     }
     public void lightON()
     {
+        Effect.playSound("AcendeLuz");
         byte[] message = System.Text.Encoding.UTF8.GetBytes("LightON");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
@@ -55,11 +58,13 @@ public class InteractionPuzzleB : MonoBehaviour {
     }
     public void openDoor()
     {
+        Effect.playSound("PortaMetal");
         byte[] message = System.Text.Encoding.UTF8.GetBytes("openDoor");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
     public void closeDoor()
     {
+        Effect.playSound("PortaMetal");
         byte[] message = System.Text.Encoding.UTF8.GetBytes("closeDoor");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
