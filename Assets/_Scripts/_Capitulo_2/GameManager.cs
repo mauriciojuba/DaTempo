@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Reset(){
+        //tira vida
 		for (int i = 0; i < CurrentButtons.Length; i++) { 
 			CurrentButtons[i] = "None";
 		}

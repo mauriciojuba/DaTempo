@@ -9,7 +9,7 @@ public class InteractionPuzzleB : MonoBehaviour {
     public GameObject jogadorA_Control, jogadorB_Control;
     public Capitulo2 _cap2;
     public AbrePorta _open;
-
+    public vida Vida;
 	public AudioManager Music;
     public AudioManager Effect;
 
@@ -45,6 +45,16 @@ public class InteractionPuzzleB : MonoBehaviour {
     public void espirraGraxa()
     {
         _cap2.click("Sujeira");
+    }
+    public void tiraVida()
+    {
+        diminuiVida();
+        byte[] message = System.Text.Encoding.UTF8.GetBytes("tiraVida2");
+        PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+    }
+    public void diminuiVida()
+    {
+        Vida.tirarVida();
     }
     public void lightON()
     {

@@ -229,6 +229,9 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "closeDoor":
                 GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().received_closeDoor();
                 break;
+            case "tiraVida2":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().diminuiVida();
+                break;
                 #endregion
         }
     }
