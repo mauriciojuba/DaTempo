@@ -16,6 +16,8 @@ public class mudandoGemas : MonoBehaviour {
     public InteractionPuzzleA _netCom;
     public GameObject finalInteraction;
 
+    public AudioManager Effect;
+
 
     void Start () {
         LimpaGemas();
@@ -79,6 +81,8 @@ public class mudandoGemas : MonoBehaviour {
     }
     void moveGema(Sprite _sprite)
     {
+        Effect.playSound("PedraPlaca");
+
         switch (espacoSelected)
         {
             case 0:
@@ -120,7 +124,8 @@ public class mudandoGemas : MonoBehaviour {
             my_combination = "" + _A + _B + _C + _D;
             if (my_combination == combination)
             {
-                Completed();
+                Effect.playSound("PainelAcerto");
+                Invoke("Completed", 1f);
             }
             else
             {
@@ -139,6 +144,9 @@ public class mudandoGemas : MonoBehaviour {
     }
     void LimpaGemas()
     {
+
+        Effect.playSound("TiraPlaca");
+
         oneOne.sprite = blank;
         oneTwo.sprite = blank;
         twoOne.sprite = blank;
@@ -150,6 +158,7 @@ public class mudandoGemas : MonoBehaviour {
     }
     void LimpaSelecao()
     {
+
         oneOne.color = standard;
         oneTwo.color = standard;
         twoOne.color = standard;
@@ -160,6 +169,8 @@ public class mudandoGemas : MonoBehaviour {
     }
     void selecionaEspaco(SpriteRenderer _espaco, int _pos)
     {
+        Effect.playSound("EspacoPlaca");
+
         _espaco.color = selected;
         espacoSelected = _pos;
     }

@@ -20,6 +20,8 @@ public class mudandoPecas : MonoBehaviour {
     string combination, my_combination, ot_combination;
     public InteractionPuzzleA _netCom;
 
+    public AudioManager Effect;
+
     void Start()
     {
         generatePuzzle(Random.Range(0, 11));
@@ -61,6 +63,7 @@ public class mudandoPecas : MonoBehaviour {
     }
     void selectSpace (int space)
     {
+        Effect.playSound("EspacoPlaca");
         spaceSelected = space;
         switch (spaceSelected)
         {
@@ -98,6 +101,7 @@ public class mudandoPecas : MonoBehaviour {
 
     void rolagemSprites(int valor)
     {
+        Effect.playSound("BotaoMenu");
         indiceSprite += valor;
 
         if (indiceSprite == 0)
@@ -151,6 +155,7 @@ public class mudandoPecas : MonoBehaviour {
 
     void posicionarPeca()
     {
+        Effect.playSound("PedraPlaca");
         switch (spaceSelected)
         {
             case 11:
@@ -207,6 +212,7 @@ public class mudandoPecas : MonoBehaviour {
     {
         if(my_combination == combination || my_combination == ot_combination)
         {
+            Effect.playSound("PainelAcerto");
             _netCom.StartPuzzle2();
         }
         else
@@ -278,6 +284,9 @@ public class mudandoPecas : MonoBehaviour {
     }
     public void Limpar()
     {
+
+        Effect.playSound("TiraPlaca");
+
         oneOne.sprite = emBranco;
         oneTwo.sprite = emBranco;
         twoOne.sprite = emBranco;

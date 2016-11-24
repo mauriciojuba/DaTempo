@@ -8,6 +8,7 @@ public class Livro : MonoBehaviour {
 	public Sprite[] Paginas;
 	public int PaginaAtual;
 	private Sprite ImagemPagina;
+    public AudioManager Effect;
 
 
 	// Use this for initialization
@@ -24,8 +25,10 @@ public class Livro : MonoBehaviour {
 		
 		
 	public void ProcimaPagina(){
-		
 		if (PaginaAtual >= 0 && PaginaAtual < Paginas.Length - 1) {
+
+            Effect.playSound("VirarPagina");
+
 			PaginaAtual++;
 			ImagemPagina = Paginas [PaginaAtual];
 			gameObject.GetComponent<SpriteRenderer> ().sprite = ImagemPagina;
@@ -35,7 +38,10 @@ public class Livro : MonoBehaviour {
 	public void PaginaAnterior(){
 
 		if (PaginaAtual > 0 && PaginaAtual <= Paginas.Length) {
-			PaginaAtual--;
+
+            Effect.playSound("VirarPagina");
+
+            PaginaAtual--;
 			ImagemPagina = Paginas [PaginaAtual];
 			gameObject.GetComponent<SpriteRenderer> ().sprite = ImagemPagina;
 

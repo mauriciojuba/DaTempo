@@ -10,6 +10,8 @@ public class InteractionPuzzleB : MonoBehaviour {
     public Capitulo2 _cap2;
     public AbrePorta _open;
 
+	public AudioManager Music;
+
     void Start () {
         splitscreen();
 	}
@@ -20,11 +22,17 @@ public class InteractionPuzzleB : MonoBehaviour {
         {
             jogadorA_Control.SetActive(true);
             jogadorB_Control.SetActive(false);
+
+			Music.playSound ("PUZZLE 2 PASSADO");
+
         }
         else
         {
             jogadorA_Control.SetActive(false);
             jogadorB_Control.SetActive(true);
+
+			Music.playSound ("PUZZLE 2 FUTURO");
+
         }
     }
     public void _graxa()

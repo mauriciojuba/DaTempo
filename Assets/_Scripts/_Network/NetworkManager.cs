@@ -14,7 +14,9 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     public GameObject JogarOff;
     static NetworkManager sInstance = null;
 
-   
+    public AudioManager Effect;
+
+
     public static NetworkManager Instance
     {
         get
@@ -53,13 +55,19 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     public void CreateQuickGame()
     {
         sInstance = new NetworkManager();
+        Effect.playSound("BotaoMenu");
         PlayGamesPlatform.Instance.RealTime.CreateQuickGame(1, 1, 0, sInstance);
     }
     public void OnRoomSetupProgress(float percent)
     {
-        if(percent == 20)
+        Effect.playSound("AguardandoJogador");
+
+        if (percent == 20)
         {
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Aguardando alguém para jogar.";
+            
+           
+
         }                                
         GameObject.Find("ConnectingText").GetComponent<Text>().text = "Setting up room (" + ((int)percent) + "%)";
     }
@@ -89,6 +97,8 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         if (success)
         {
+            Destroy(GameObject.Find("AguardandoJogador"));
+            Effect.playSound("EntrouJogador");
 
             GameObject.Find("ConnectingText").GetComponent<Text>().text = "Sala Criada";
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Vamos Jogar!!";
@@ -97,8 +107,8 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
-            SceneManager.LoadScene("LevelSelect");
 
+            Invoke("LevelSelect", 1f);
 
         }
         else
@@ -107,6 +117,11 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Falhou, Tente de Novo.";
             PlayGamesPlatform.Instance.RealTime.LeaveRoom();
         }
+    }
+
+    private void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void OnParticipantLeft(Participant participant)
@@ -214,5 +229,12 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     public void SendMessageToAll(bool reliable, byte[] _msg)
     {
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(reliable, _msg);
+    }
+
+    public void Creditos() {
+
+        Effect.playSound("BotaoMenu");
+        SceneManager.LoadScene("Creditos");
+
     }
 }

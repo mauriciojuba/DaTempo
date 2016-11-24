@@ -6,6 +6,8 @@ public class canoVapor : MonoBehaviour {
     public Sprite arrumado, quebrado;
     float vaporLevel,countVapor;
     bool vaporOn, consertando;
+
+    public AudioManager Effect;
     
 
 
@@ -36,6 +38,7 @@ public class canoVapor : MonoBehaviour {
     
     void consertaPipe()
     {
+        Effect.playSound("ConsertaCano");
         consertando = true;
     }
 
@@ -57,6 +60,8 @@ public class canoVapor : MonoBehaviour {
                     consertando = false;
                     countVapor = 0;
                     pipe.sprite = arrumado;
+                    Destroy(GameObject.Find("VaporSaindo"));
+
                 }
                 countVapor += Time.deltaTime;
             }
@@ -71,6 +76,8 @@ public class canoVapor : MonoBehaviour {
     }
     public void soltaVapor()
     {
+        Effect.playSound("QuebraCano");
+        Effect.playSound("VaporSaindo");
         vaporOn = true;
         pipe.sprite = quebrado;
     }

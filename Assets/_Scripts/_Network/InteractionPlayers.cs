@@ -16,6 +16,8 @@ public class InteractionPlayers : MonoBehaviour {
     Sprite _antonio, _douglas;
     public static bool isAntonio, isDouglas;
 
+    public AudioManager Effect;
+
 
 
     
@@ -38,6 +40,7 @@ public class InteractionPlayers : MonoBehaviour {
 
     public void escolheUm()
     {
+        Effect.playSound("EfeitoAntonio");
         DouglasAvatar.sprite = _douglas;
         isDouglas = false;
         isAntonio = true;
@@ -48,6 +51,7 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void sobrouDois()
     {
+        Effect.playSound("EfeitoDouglas");
         AntonioAvatar.sprite = _antonio;
         DouglasAvatar.sprite = _sDouglas;
         isDouglas = true;
@@ -55,6 +59,7 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void escolheDois()
     {
+        Effect.playSound("EfeitoDouglas");
         DouglasAvatar.sprite = _sDouglas;
         AntonioAvatar.sprite = _antonio;
         isDouglas = true;
@@ -65,6 +70,7 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void sobrouUm()
     {
+        Effect.playSound("EfeitoAntonio");
         AntonioAvatar.sprite = _sAntonio;
         DouglasAvatar.sprite = _douglas;
         isAntonio = true;
@@ -72,6 +78,7 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void showPlayMenu()
     {
+        Effect.playSound("BotaoConfirmar");
         areyousure.SetActive(true);
     }
     public void noPlay()
@@ -87,6 +94,7 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void noPlayAll()
     {
+        Effect.playSound("BotaoMenu");
         areyousure.SetActive(false);
         showPlay.interactable = false;
         AntonioAvatar.sprite = _antonio;
@@ -111,6 +119,7 @@ public class InteractionPlayers : MonoBehaviour {
     }
     public void yesPlayAll()
     {
+        Effect.playSound("BotaoConfirmar");
         if (InteractionLevels.index == 0)
         {
             SceneManager.LoadScene("Fase1A");

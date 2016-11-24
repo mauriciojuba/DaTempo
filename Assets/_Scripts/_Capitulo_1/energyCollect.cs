@@ -5,8 +5,12 @@ public class energyCollect : MonoBehaviour {
 
     public GameObject mockUp, energy, font, bigfont;
     public InteractionPuzzleA _unet;
+
+    public AudioManager Effect;
+
     void OnEnable()
     {
+        Effect.playSound("PedraArrastando");
         bigfont.SetActive(false);
         font.SetActive(true);
         energy.SetActive(true);
@@ -17,15 +21,23 @@ public class energyCollect : MonoBehaviour {
         switch (obj)
         {
             case "Fonte":
+                Effect.playSound("PedraPlaca");
                 energy.SetActive(false);
                 font.SetActive(false);
                 Invoke("BigFont", 0.5f);
                 break;
             case "FimFase1":
-                _unet.nextStage();
+                Effect.playSound("PainelAcerto");
+                Invoke("Next", 1f);
                 break;
         }
     }
+
+    void Next()
+    {
+        _unet.nextStage();
+    }
+
     void BigFont()
     {
         bigfont.SetActive(true);

@@ -9,6 +9,8 @@ public class InteractionPuzzleA : MonoBehaviour {
     public GameObject _aController, _aCanvas, _bController, _bCanvas;
     public GameObject _a2Controller, _b2Controller, _b2Canvas;
     public GameObject _pipe;
+	public AudioManager Music;
+    public AudioManager Effect;
 
 
     void Start () {
@@ -44,6 +46,9 @@ public class InteractionPuzzleA : MonoBehaviour {
             _b2Canvas.SetActive(false);
             _b2Controller.SetActive(false);
             _pipe.SetActive(false);
+
+			Music.playSound ("PUZZLE 1 EGITO");
+
         }
         else
         {
@@ -56,6 +61,9 @@ public class InteractionPuzzleA : MonoBehaviour {
             _b2Canvas.SetActive(true);
             _b2Controller.SetActive(false);
             _pipe.SetActive(true);
+
+			Music.playSound ("PUZZLE 1 LAB");
+
         }
     }
     public void StartPuzzle2()
@@ -80,6 +88,8 @@ public class InteractionPuzzleA : MonoBehaviour {
         }
         else
         {
+            Effect.playSound("VirarPagina");
+
             _aController.SetActive(false);
             _aCanvas.SetActive(false);
             _bCanvas.SetActive(false);
