@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [CustomEditor(typeof(AudioManager))]
 public class AudioManagerEditor : Editor {
