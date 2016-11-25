@@ -55,13 +55,19 @@ public class Capitulo2 : MonoBehaviour {
     }
     void nextLevel()
     {
+        
         _unet.nextLevel();
+    }
+    void proxFase()
+    {
+        _btn.sprite = btnAtivo;
+        Invoke("nextLevel", 1f);
     }
     public void LightsON()
     {
         _luz.sprite = luzAcesa;
         _next = true;
-        _btn.sprite = btnAtivo;
+        
 
     }
     public void DoorHandler()
