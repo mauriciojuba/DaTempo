@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using GooglePlayGames;
-using System.Collections;
 using UnityEngine.SceneManagement;
-using System;
+using UnityEngine.UI;
 
 public class InteractionPuzzleB : MonoBehaviour {
     NetworkManager _net = new NetworkManager();
@@ -12,10 +11,27 @@ public class InteractionPuzzleB : MonoBehaviour {
     public vida Vida;
 	public AudioManager Music;
     public AudioManager Effect;
+    bool canStart;
+    public GameObject PainelPosFase, textosParabens;
+    public Text nomeAmigo;
 
     void Start () {
-        splitscreen();
+        jogadorA_Control.SetActive(false);
+        jogadorB_Control.SetActive(false);
+        PosJogo();
 	}
+    void PosJogo()
+    {
+        PainelPosFase.SetActive(true);
+        textosParabens.SetActive(true);
+        nomeAmigo.text = PlayGamesPlatform.Instance.RealTime.GetParticipant(Jogadores.segundoPlayerID).DisplayName;
+    }
+    public void startPuzzleB()
+    {
+        PainelPosFase.SetActive(false);
+        textosParabens.SetActive(false);
+        splitscreen();
+    }
 
     private void splitscreen()
     {
