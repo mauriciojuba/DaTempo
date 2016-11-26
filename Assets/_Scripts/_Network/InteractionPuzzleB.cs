@@ -24,7 +24,14 @@ public class InteractionPuzzleB : MonoBehaviour {
     {
         PainelPosFase.SetActive(true);
         textosParabens.SetActive(true);
-        nomeAmigo.text = PlayGamesPlatform.Instance.RealTime.GetParticipant(Jogadores.segundoPlayerID).DisplayName;
+        if (PlayGamesPlatform.Instance.localUser.userName == PlayGamesPlatform.Instance.RealTime.GetParticipant(Jogadores.segundoPlayerID).DisplayName)
+        {
+            nomeAmigo.text = PlayGamesPlatform.Instance.RealTime.GetParticipant(Jogadores.primeiroPlayerID).DisplayName;
+        }
+        else
+        {
+            nomeAmigo.text = PlayGamesPlatform.Instance.RealTime.GetParticipant(Jogadores.segundoPlayerID).DisplayName;
+        }
     }
     public void startPuzzleB()
     {

@@ -6,7 +6,7 @@ public class cutscene : MonoBehaviour {
 
     public void nextLevel()
     {
-        SceneManager.LoadScene("Fase1A");
+        SceneManager.LoadScene("LevelSelect");
     }
 	void Update () {
 	

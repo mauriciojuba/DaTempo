@@ -54,21 +54,24 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     }
     public void CreateQuickGame()
     {
+        //Effect.playSound("BotaoMenu");
+        //Effect.playSound("AguardandoJogador");
         sInstance = new NetworkManager();
-        Effect.playSound("BotaoMenu");
         PlayGamesPlatform.Instance.RealTime.CreateQuickGame(1, 1, 0, sInstance);
+        
     }
     public void OnRoomSetupProgress(float percent)
     {
-        Effect.playSound("AguardandoJogador");
-
+        //Effect.playSound("AguardandoJogador");
+        GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "???";
         if (percent == 20)
         {
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Aguardando alguém para jogar.";
-            
-           
-
-        }                                
+        }
+        else
+        {
+            GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "" + ((int)percent);
+        }                               
         GameObject.Find("ConnectingText").GetComponent<Text>().text = "Setting up room (" + ((int)percent) + "%)";
     }
 
@@ -97,8 +100,11 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     {
         if (success)
         {
-            Destroy(GameObject.Find("AguardandoJogador"));
-            Effect.playSound("EntrouJogador");
+            if (GameObject.Find("AguardandoJogador") != null)
+            {
+                Destroy(GameObject.Find("AguardandoJogador"));
+            }
+            //Effect.playSound("EntrouJogador");
 
             GameObject.Find("ConnectingText").GetComponent<Text>().text = "Sala Criada";
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Vamos Jogar!!";
@@ -108,7 +114,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             Jogadores.primeiroPlayerName = participantes().First().DisplayName;
             Jogadores.segundoPlayerName = participantes().Last().DisplayName;
 
-            Invoke("LevelSelect", 1f);
+            SceneManager.LoadScene("CutsceneUM");
 
         }
         else
@@ -119,9 +125,9 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         }
     }
 
-    private void LevelSelect()
+    private void CUTSCENE()
     {
-        SceneManager.LoadScene("LevelSelect");
+        
     }
 
     public void OnParticipantLeft(Participant participant)
@@ -241,7 +247,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     }
 
     public void Creditos() {
-
+        
         Effect.playSound("BotaoMenu");
         SceneManager.LoadScene("Creditos");
 
