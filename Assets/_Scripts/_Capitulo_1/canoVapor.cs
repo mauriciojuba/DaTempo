@@ -93,5 +93,6 @@ public class canoVapor : MonoBehaviour {
         Effect.playSound("VaporSaindo");
         vaporOn = true;
         pipe.sprite = quebrado;
+        diminuiVida();
     }
 }

@@ -215,6 +215,14 @@ public class mudandoPecas : MonoBehaviour {
             
         }
     }
+    public void diminuiVida()
+    {
+        lifecount--;
+        if (lifecount == 2) vida3.SetActive(false);
+        if (lifecount == 1) vida2.SetActive(false);
+        if (lifecount == 0) vida1.SetActive(false);
+        if (lifecount == -1) lifecount = 3;
+    }
     public void checkCombination()
     {
         if(my_combination == combination || my_combination == ot_combination)
@@ -224,25 +232,7 @@ public class mudandoPecas : MonoBehaviour {
         }
         else
         {
-            lifecount--;
-            switch (lifecount)
-            {
-                case -1:
-                    Invoke("LevelSelect", 0.5f);
-                    break;
-                case 0:
-                    vida3.SetActive(false);
-                    vida2.SetActive(false);
-                    vida1.SetActive(false);
-                    break;
-                case 1:
-                    vida3.SetActive(false);
-                    vida2.SetActive(false);
-                    break;
-                case 2:
-                    vida3.SetActive(false);
-                    break;
-            }
+            diminuiVida();
             _netCom.vapor();
             Limpar();
             //RETIRA UMA DAS 3 CHANCES.
