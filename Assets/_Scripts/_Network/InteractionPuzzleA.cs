@@ -26,7 +26,7 @@ public class InteractionPuzzleA : MonoBehaviour {
     }
     public void nextStageAll()
     {
-        SceneManager.LoadScene("Fase2A");
+        SceneManager.LoadScene("CutsceneDOIS");
     }
     public void diminuiVida()
     {
