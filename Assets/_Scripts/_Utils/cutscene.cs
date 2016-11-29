@@ -8,7 +8,9 @@ public class cutscene : MonoBehaviour {
     {
         SceneManager.LoadScene("LevelSelect");
     }
-	void Update () {
-	
-	}
+    public void cutscene2()
+    {
+        SceneManager.LoadScene("Fase2A");
+    }
+
 }
