@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: e4254576285125c4e88d7891766bccc5
+timeCreated: 1480786628
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: splash1_0
+    21300002: splash1_1
+    21300004: splash1_2
+    21300006: splash1_3
+    21300008: splash1_4
+    21300010: splash1_5
+    21300012: splash1_6
+    21300014: splash1_7
+    21300016: splash1_8
+    21300018: splash1_9
+    21300020: splash1_10
+    21300022: splash1_11
+    21300024: splash1_12
+    21300026: splash1_13
+    21300028: splash1_14
+    21300030: splash1_15
+    21300032: splash1_16
+    21300034: splash1_17
+    21300036: splash1_18
+    21300038: splash1_19
+    21300040: splash1_20
+    21300042: splash1_21
+    21300044: splash1_22
+    21300046: splash1_23
+    21300048: splash1_24
+    21300050: splash1_25
+    21300052: splash1_26
+    21300054: splash1_27
+    21300056: splash1_28
+    21300058: splash1_29
+    21300060: splash1_30
+    21300062: splash1_31
+    21300064: splash1_35
+    21300066: splash1_36
+    21300068: splash1_37
+    21300070: splash1_38
+    21300072: splash1_39
+    21300074: splash1_40
+    21300076: splash1_41
+    21300078: splash1_42
+    21300080: splash1_43
+    21300082: splash1_44
+    21300084: splash1_45
+    21300086: splash1_46
+    21300088: splash1_47
+    21300090: splash1_48
+    21300092: splash1_49
+    21300094: splash1_50
+    21300096: splash1_51
+    21300098: splash1_52
+    21300100: splash1_53
+    21300102: splash1_54
+    21300104: splash1_55
+    21300106: splash1_56
+    21300108: splash1_57
+    21300110: splash1_58
+    21300112: splash1_59
+    21300114: splash1_32
+    21300116: splash1_33
+    21300118: splash1_34
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 150
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: splash1_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2498
+        width: 343
+        height: 503
+      alignment: 9
+      pivot: {x: 0.4886787, y: 0.015824487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 2526
+        width: 389
+        height: 484
+      alignment: 9
+      pivot: {x: 0.5529718, y: 0.014627757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_2
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 2546
+        width: 431
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5959923, y: 0.015258789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_3
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 2568
+        width: 462
+        height: 442
+      alignment: 9
+      pivot: {x: 0.6258458, y: 0.018862348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_4
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2594
+        width: 488
+        height: 416
+      alignment: 9
+      pivot: {x: 0.6439384, y: 0.01885869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_5
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 2610
+        width: 484
+        height: 400
+      alignment: 9
+      pivot: {x: 0.64089787, y: 0.017699584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_6
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2626
+        width: 479
+        height: 384
+      alignment: 9
+      pivot: {x: 0.63892114, y: 0.017796198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_7
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 2641
+        width: 472
+        height: 369
+      alignment: 9
+      pivot: {x: 0.6348794, y: 0.019816412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_8
+      rect:
+        serializedVersion: 2
+        x: 3567
+        y: 2639
+        width: 486
+        height: 371
+      alignment: 9
+      pivot: {x: 0.6424792, y: 0.019746436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2065
+        width: 459
+        height: 429
+      alignment: 9
+      pivot: {x: 0.62335074, y: 0.01953694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_10
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2038
+        width: 414
+        height: 454
+      alignment: 9
+      pivot: {x: 0.58291435, y: 0.016405819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_11
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 2041
+        width: 352
+        height: 451
+      alignment: 9
+      pivot: {x: 0.5096314, y: 0.01648626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_12
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 2024
+        width: 364
+        height: 469
+      alignment: 9
+      pivot: {x: 0.3113058, y: 0.015881114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_13
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 1990
+        width: 436
+        height: 504
+      alignment: 9
+      pivot: {x: 0.2603494, y: 0.013364519}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_14
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1966
+        width: 497
+        height: 528
+      alignment: 9
+      pivot: {x: 0.22830047, y: 0.008987658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_15
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 1968
+        width: 497
+        height: 526
+      alignment: 9
+      pivot: {x: 0.2276933, y: 0.014160156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_16
+      rect:
+        serializedVersion: 2
+        x: 3019
+        y: 1974
+        width: 497
+        height: 518
+      alignment: 9
+      pivot: {x: 0.2282204, y: 0.013003316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_17
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 1980
+        width: 499
+        height: 514
+      alignment: 9
+      pivot: {x: 0.22685361, y: 0.012146946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1459
+        width: 497
+        height: 507
+      alignment: 9
+      pivot: {x: 0.22782488, y: 0.012800047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_19
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1464
+        width: 497
+        height: 502
+      alignment: 9
+      pivot: {x: 0.22732463, y: 0.013857169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_20
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1471
+        width: 498
+        height: 497
+      alignment: 9
+      pivot: {x: 0.2293689, y: 0.01644609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_21
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 1477
+        width: 498
+        height: 489
+      alignment: 9
+      pivot: {x: 0.22931987, y: 0.016238097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_22
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 1482
+        width: 498
+        height: 480
+      alignment: 9
+      pivot: {x: 0.22923873, y: 0.0196757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_23
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 1491
+        width: 498
+        height: 475
+      alignment: 9
+      pivot: {x: 0.22913332, y: 0.016198602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_24
+      rect:
+        serializedVersion: 2
+        x: 2986
+        y: 1499
+        width: 498
+        height: 469
+      alignment: 9
+      pivot: {x: 0.22962554, y: 0.016405834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_25
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 1495
+        width: 488
+        height: 473
+      alignment: 9
+      pivot: {x: 0.234375, y: 0.015719973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 991
+        width: 468
+        height: 467
+      alignment: 9
+      pivot: {x: 0.2409451, y: 0.010231949}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_27
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 989
+        width: 452
+        height: 472
+      alignment: 9
+      pivot: {x: 0.25074863, y: 0.015259177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_28
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 993
+        width: 431
+        height: 468
+      alignment: 9
+      pivot: {x: 0.263722, y: 0.015416984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_29
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 999
+        width: 409
+        height: 462
+      alignment: 9
+      pivot: {x: 0.2785734, y: 0.016094258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_30
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1006
+        width: 381
+        height: 455
+      alignment: 9
+      pivot: {x: 0.2977673, y: 0.017964324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_31
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1017
+        width: 360
+        height: 445
+      alignment: 9
+      pivot: {x: 0.31664294, y: 0.0167667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_35
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 1020
+        width: 341
+        height: 441
+      alignment: 9
+      pivot: {x: 0.4880994, y: 0.019621488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 549
+        width: 337
+        height: 438
+      alignment: 9
+      pivot: {x: 0.49311665, y: 0.02315434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_37
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 553
+        width: 337
+        height: 438
+      alignment: 9
+      pivot: {x: 0.49397627, y: 0.0141292205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_38
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 494
+        width: 339
+        height: 495
+      alignment: 9
+      pivot: {x: 0.48961592, y: 0.1310203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_39
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 496
+        width: 338
+        height: 493
+      alignment: 9
+      pivot: {x: 0.4910813, y: 0.12715258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_40
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 498
+        width: 337
+        height: 493
+      alignment: 9
+      pivot: {x: 0.49408558, y: 0.12350136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_41
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 495
+        width: 339
+        height: 495
+      alignment: 9
+      pivot: {x: 0.48811454, y: 0.12735903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_42
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 494
+        width: 337
+        height: 498
+      alignment: 9
+      pivot: {x: 0.4924925, y: 0.1295622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_43
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 495
+        width: 337
+        height: 497
+      alignment: 9
+      pivot: {x: 0.49240267, y: 0.12798348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_44
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 494
+        width: 338
+        height: 498
+      alignment: 9
+      pivot: {x: 0.4903391, y: 0.13019693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_45
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 496
+        width: 340
+        height: 496
+      alignment: 9
+      pivot: {x: 0.49160802, y: 0.12515615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_46
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 494
+        width: 339
+        height: 498
+      alignment: 9
+      pivot: {x: 0.49118933, y: 0.13039793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_47
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 495
+        width: 339
+        height: 497
+      alignment: 9
+      pivot: {x: 0.48925996, y: 0.12897368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 337
+        height: 496
+      alignment: 9
+      pivot: {x: 0.49266496, y: 0.12719221}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 339
+        height: 495
+      alignment: 9
+      pivot: {x: 0.49078342, y: 0.12694237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_50
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 0
+        width: 339
+        height: 494
+      alignment: 9
+      pivot: {x: 0.4897272, y: 0.12720905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_51
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 0
+        width: 338
+        height: 494
+      alignment: 9
+      pivot: {x: 0.49050307, y: 0.12732385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_52
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 0
+        width: 338
+        height: 494
+      alignment: 9
+      pivot: {x: 0.49256563, y: 0.12695417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_53
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 0
+        width: 338
+        height: 494
+      alignment: 9
+      pivot: {x: 0.4845332, y: 0.12745227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_54
+      rect:
+        serializedVersion: 2
+        x: 2033
+        y: 0
+        width: 339
+        height: 494
+      alignment: 9
+      pivot: {x: 0.4922019, y: 0.12770715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_55
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 0
+        width: 338
+        height: 494
+      alignment: 9
+      pivot: {x: 0.48984867, y: 0.12868586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_56
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 0
+        width: 338
+        height: 494
+      alignment: 9
+      pivot: {x: 0.49073422, y: 0.12933208}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_57
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 0
+        width: 339
+        height: 494
+      alignment: 9
+      pivot: {x: 0.49305028, y: 0.12857689}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_58
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 0
+        width: 340
+        height: 494
+      alignment: 9
+      pivot: {x: 0.4918134, y: 0.12820525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_59
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 0
+        width: 339
+        height: 494
+      alignment: 9
+      pivot: {x: 0.48904032, y: 0.12857276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_32
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1026
+        width: 345
+        height: 434
+      alignment: 9
+      pivot: {x: 0.35811326, y: 0.012429795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_33
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 1035
+        width: 340
+        height: 424
+      alignment: 9
+      pivot: {x: 0.4204073, y: 0.015626151}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: splash1_34
+      rect:
+        serializedVersion: 2
+        x: 3186
+        y: 1023
+        width: 336
+        height: 440
+      alignment: 9
+      pivot: {x: 0.49355716, y: 0.0131020285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
