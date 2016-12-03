@@ -18,14 +18,18 @@ public class mudandoGemas : MonoBehaviour {
     public mudandoPecas puzzle1;
     public AudioManager Effect;
     public GameObject vida1, vida2, vida3;
+    public GameObject hR, hG, hB, hP;
     int lifeCount;
+    bool gemaAtivada;
+    Sprite selectedGem;
 
 
     void Start () {
         LimpaGemas();
         LimpaSelecao();
         randomizaEmblema();
-	}
+        desativaGema();
+    }
     void OnEnable() {
 
         lifeCount = puzzle1.lifecount;
@@ -54,71 +58,100 @@ public class mudandoGemas : MonoBehaviour {
             case "11":
                 LimpaSelecao();
                 selecionaEspaco(oneOne,11);
+                moveGema();
                 break;
             case "12":
                 LimpaSelecao();
                 selecionaEspaco(oneTwo,12);
+                moveGema();
                 break;
             case "21":
                 LimpaSelecao();
                 selecionaEspaco(twoOne,21);
+                moveGema();
                 break;
             case "22":
                 LimpaSelecao();
                 selecionaEspaco(twoTwo,22);
+                moveGema();
                 break;
             case "Limpar":
+                desativaGema();
                 LimpaGemas();
                 LimpaSelecao();
                 break;
             case "R":
-                moveGema(R);
+                desativaGema();
+                ativaGema(hR,R);
                 break;
             case "G":
-                moveGema(G);
+                desativaGema();
+                ativaGema(hG, G);
                 break;
             case "B":
-                moveGema(B);
+                desativaGema();
+                ativaGema(hB, B);
                 break;
             case "P":
-                moveGema(P);
+                desativaGema();
+                ativaGema(hP, P);
                 break;
         }
     }
-    void moveGema(Sprite _sprite)
+    void ativaGema(GameObject highlight, Sprite gemaEscolhida)
     {
-        Effect.playSound("PedraPlaca");
+        gemaAtivada = true;
+        highlight.SetActive(true);
+        selectedGem = gemaEscolhida;
+    }
+    void desativaGema()
+    {
+        gemaAtivada = false;
+        hR.SetActive(false);
+        hB.SetActive(false);
+        hG.SetActive(false);
+        hP.SetActive(false);
+        selectedGem = null;
+    }
 
-        switch (espacoSelected)
+    void moveGema()
+    {
+        if (gemaAtivada)
         {
-            case 0:
-                PainelAviso.SetActive(true);
-                LimpaSelecao();
-                break;
-            case 11:
-                oneOne.sprite = _sprite;
-                _A = _sprite.name;
-                _a = true;
-                LimpaSelecao();
-                break;
-            case 12:
-                oneTwo.sprite = _sprite;
-                _B = _sprite.name;
-                _b = true;
-                LimpaSelecao();
-                break;
-            case 21:
-                twoOne.sprite = _sprite;
-                _C = _sprite.name;
-                _c = true;
-                LimpaSelecao();
-                break;
-            case 22:
-                twoTwo.sprite = _sprite;
-                _D = _sprite.name;
-                _d = true;
-                LimpaSelecao();
-                break;
+            Effect.playSound("PedraPlaca");
+
+            switch (espacoSelected)
+            {
+                case 0:
+                    PainelAviso.SetActive(true);
+                    LimpaSelecao();
+                    break;
+                case 11:
+                    oneOne.sprite = selectedGem;
+                    _A = selectedGem.name;
+                    _a = true;
+                    LimpaSelecao();
+                    break;
+                case 12:
+                    oneTwo.sprite = selectedGem;
+                    _B = selectedGem.name;
+                    _b = true;
+                    LimpaSelecao();
+                    break;
+                case 21:
+                    twoOne.sprite = selectedGem;
+                    _C = selectedGem.name;
+                    _c = true;
+                    LimpaSelecao();
+                    break;
+                case 22:
+                    twoTwo.sprite = selectedGem;
+                    _D = selectedGem.name;
+                    _d = true;
+                    LimpaSelecao();
+                    break;
+            }
+            desativaGema();
         }
         
     }
@@ -135,6 +168,7 @@ public class mudandoGemas : MonoBehaviour {
             }
             else
             {
+                desativaGema();
                 LimpaGemas();
                 //som de erro
                 _netCom.vapor();
@@ -174,7 +208,7 @@ public class mudandoGemas : MonoBehaviour {
     {
 
         Effect.playSound("TiraPlaca");
-
+        desativaGema();
         oneOne.sprite = blank;
         oneTwo.sprite = blank;
         twoOne.sprite = blank;

@@ -21,11 +21,14 @@ public class mudandoPecas : MonoBehaviour {
     public InteractionPuzzleA _netCom;
     public GameObject vida1,vida2,vida3;
     public int lifecount;
+    bool pecaAtivada;
+    public GameObject highlighted;
 
     public AudioManager Effect;
 
     void Start()
     {
+        highlighted.SetActive(false);
         generatePuzzle(Random.Range(0, 11));
         rolagemSprites(0);
         PainelAviso.SetActive(false);
@@ -43,53 +46,78 @@ public class mudandoPecas : MonoBehaviour {
         switch (name)
         {
             case "11":
+                //if(pecaselecionada)posiciona a peça
                 selectSpace(11);
                 break;
             case "12":
+                //if(pecaselecionada)posiciona a peça
                 selectSpace(12);
                 break;
             case "21":
+                //if(pecaselecionada)posiciona a peça
                 selectSpace(21);
                 break;
             case "22":
+                //if(pecaselecionada)posiciona a peça
                 selectSpace(22);
                 break;
             case "ProximaPeca":
+                //limpa ativação da peça e rola as peças da mão
+                desativaSelecaoPeca();
                 rolagemSprites(1);
                 break;
             case "AnteriorPeca":
+                //limpa ativação da peça e rola as peças da mão
+                desativaSelecaoPeca();
                 rolagemSprites(-1);
                 break;
             case "PecaDaVez":
-                posicionarPeca();
+                //peça ativada escolha a posição
+                ativaSelecaoPeca();
                 break;
             case "Limpar":
+                //limpa ativação da peça e resseta todas posicionadas
                 Limpar();
                 break;
         }
     }
-    void selectSpace (int space)
+    void ativaSelecaoPeca()
     {
         Effect.playSound("EspacoPlaca");
-        spaceSelected = space;
-        switch (spaceSelected)
+        pecaAtivada = true;
+        highlighted.SetActive(true);
+    }
+    void desativaSelecaoPeca()
+    {
+        pecaAtivada = false;
+        highlighted.SetActive(false);
+    }
+    void selectSpace (int space)
+    {
+        if (pecaAtivada)
         {
-            case 11:
-                clearSelection();
-                oneOne.color = green;
-                break;
-            case 12:
-                clearSelection();
-                oneTwo.color = green;
-                break;
-            case 21:
-                clearSelection();
-                twoOne.color = green;
-                break;
-            case 22:
-                clearSelection();
-                twoTwo.color = green;
-                break;
+            spaceSelected = space;
+            switch (spaceSelected)
+            {
+                case 11:
+                    clearSelection();
+                    oneOne.color = green;
+                    break;
+                case 12:
+                    clearSelection();
+                    oneTwo.color = green;
+                    break;
+                case 21:
+                    clearSelection();
+                    twoOne.color = green;
+                    break;
+                case 22:
+                    clearSelection();
+                    twoTwo.color = green;
+                    break;
+            }
+            posicionarPeca();
+            desativaSelecaoPeca();
         }
     }
 
@@ -232,6 +260,7 @@ public class mudandoPecas : MonoBehaviour {
         }
         else
         {
+            desativaSelecaoPeca();
             diminuiVida();
             _netCom.vapor();
             Limpar();
@@ -306,7 +335,7 @@ public class mudandoPecas : MonoBehaviour {
     {
 
         Effect.playSound("TiraPlaca");
-
+        desativaSelecaoPeca();
         oneOne.sprite = emBranco;
         oneTwo.sprite = emBranco;
         twoOne.sprite = emBranco;
