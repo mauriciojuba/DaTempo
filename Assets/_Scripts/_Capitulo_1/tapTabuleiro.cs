@@ -11,7 +11,8 @@ public class tapTabuleiro : MonoBehaviour
     public static int puzzleAtivo;
     void Start()
     {
-        puzzleAtivo = 1;
+        //lembrar de voltar para 0 antes da build
+        puzzleAtivo = 0;
     }
 
     private void OnEnable()

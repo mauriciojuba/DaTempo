@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: 51d890c00b600b04795cb622955a955b
+timeCreated: 1480744913
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ampulheta_0
+    21300002: ampulheta_1
+    21300004: ampulheta_2
+    21300006: ampulheta_3
+    21300008: ampulheta_4
+    21300010: ampulheta_5
+    21300012: ampulheta_6
+    21300014: ampulheta_7
+    21300016: ampulheta_8
+    21300018: ampulheta_9
+    21300020: ampulheta_10
+    21300022: ampulheta_11
+    21300024: ampulheta_12
+    21300026: ampulheta_13
+    21300028: ampulheta_14
+    21300030: ampulheta_15
+    21300032: ampulheta_16
+    21300034: ampulheta_17
+    21300036: ampulheta_18
+    21300038: ampulheta_19
+    21300040: ampulheta_20
+    21300042: ampulheta_21
+    21300044: ampulheta_22
+    21300046: ampulheta_23
+    21300048: ampulheta_24
+    21300050: ampulheta_25
+    21300052: ampulheta_26
+    21300054: ampulheta_27
+    21300056: ampulheta_28
+    21300058: ampulheta_29
+    21300060: ampulheta_30
+    21300062: ampulheta_31
+    21300064: ampulheta_32
+    21300066: ampulheta_33
+    21300068: ampulheta_34
+    21300070: ampulheta_35
+    21300072: ampulheta_36
+    21300074: ampulheta_37
+    21300076: ampulheta_38
+    21300078: ampulheta_39
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ampulheta_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_1
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_4
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_5
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_6
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_7
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1062
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_10
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_12
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_13
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_14
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 806
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_15
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 775
+        width: 237
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 533
+        width: 219
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_17
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 539
+        width: 219
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_18
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 525
+        width: 237
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 555
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_20
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 555
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_21
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 555
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_22
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 555
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_23
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 555
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_25
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_26
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_27
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_28
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_29
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_30
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_31
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 299
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_32
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 43
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_33
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 43
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_34
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 43
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_35
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 13
+        width: 236
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_36
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 27
+        width: 219
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_37
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 21
+        width: 219
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_38
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 7
+        width: 236
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ampulheta_39
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 38
+        width: 169
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

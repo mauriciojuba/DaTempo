@@ -11,6 +11,7 @@ using GooglePlayGames.BasicApi.Multiplayer;
 
 public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 {
+    public GameObject ampulheta;
     public GameObject JogarOff;
     static NetworkManager sInstance = null;
 
@@ -36,6 +37,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.Activate();
         Login();
+        ampulheta.SetActive(false);
     }
     public void Login()
     {
@@ -58,19 +60,17 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         //Effect.playSound("AguardandoJogador");
         sInstance = new NetworkManager();
         PlayGamesPlatform.Instance.RealTime.CreateQuickGame(1, 1, 0, sInstance);
-        
+        ampulheta.SetActive(true);
+
     }
     public void OnRoomSetupProgress(float percent)
     {
         //Effect.playSound("AguardandoJogador");
-        GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "???";
         if (percent == 20)
         {
-            GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Aguardando alguém para jogar.";
         }
         else
         {
-            GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "" + ((int)percent);
         }                               
         GameObject.Find("ConnectingText").GetComponent<Text>().text = "Setting up room (" + ((int)percent) + "%)";
     }
@@ -107,7 +107,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             //Effect.playSound("EntrouJogador");
 
             GameObject.Find("ConnectingText").GetComponent<Text>().text = "Sala Criada";
-            GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Vamos Jogar!!";
             jogadores = participantes();
             Jogadores.primeiroPlayerID = participantes().First().ParticipantId;
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
@@ -121,6 +120,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         {
             GameObject.Find("ConnectingText").GetComponent<Text>().text = "Falha ao criar a sala";
             GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Falhou, Tente de Novo.";
+            ampulheta.SetActive(false);
             PlayGamesPlatform.Instance.RealTime.LeaveRoom();
         }
     }
@@ -157,7 +157,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         GameObject.Find("LoginText").GetComponent<Text>().text = "";
         GameObject.Find("LogText").GetComponent<Text>().text = "";
         GameObject.Find("ConnectingText").GetComponent<Text>().text = "";
-        GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "";
     }
     private List<byte> _updateMessage;
 
