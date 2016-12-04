@@ -12,9 +12,12 @@ public class InteractionPuzzleA : MonoBehaviour {
 	public AudioManager Music;
     public AudioManager Effect;
 
+    public TutorialFase1 Tutorial1;
+
 
     void Start () {
         splitScreens();
+
 	}
 	
 	// Update is called once per frame

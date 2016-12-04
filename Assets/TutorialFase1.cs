@@ -21,13 +21,8 @@ public class TutorialFase1 : MonoBehaviour {
         Mao_A = MaozinhaA.GetComponent<Animator>();
         Mao_B = MaozinhaB.GetComponent<Animator>();
 
-        TutorialA.SetActive(false);
-        
-        for (int i = 0; i < FalasJogadorB.Length; i++)
-            FalasJogadorB[i].SetActive(false);
+        AtivaFalaB(0);
 
-        for (int i = 0; i < FalasJogadorA.Length; i++)
-            FalasJogadorA[i].SetActive(false);
     }
 
 
@@ -39,6 +34,7 @@ public class TutorialFase1 : MonoBehaviour {
         BloqueiaA.SetActive(true);
 
         TutorialA.SetActive(true);
+
         FalasJogadorA[fala].SetActive(true);
 
         if (fala == 0) { 
@@ -84,18 +80,56 @@ public class TutorialFase1 : MonoBehaviour {
     //------------- Falas Jogador B -------------
 
     public void AtivaFalaB(int fala){
+
+        BloqueiaB.SetActive(true);
+
         TutorialB.SetActive(true);
+
         FalasJogadorB[fala].SetActive(true);
+
+        if (fala == 0)
+        {
+            MaozinhaB.SetActive(true);
+            MaoB("Livro");
+        }
+
+        if (fala == 1)
+        {
+            MaozinhaB.SetActive(false);
+        }
+
+        if (fala == 2)
+        {
+            MaozinhaB.SetActive(true);
+            MaoB("Cano");
+        }
+
+        if (fala == 3)
+        {
+            MaozinhaB.SetActive(true);
+            MaoB("Xtela");
+        }
+
     }
 
     public void DesativaFalaB(){
+
+        BloqueiaB.SetActive(false);
+
+        MaozinhaB.SetActive(false);
+
         for (int i = 0; i < FalasJogadorB.Length; i++){
             FalasJogadorB[i].SetActive(false);
         }
     }
 
-	// Update is called once per frame
-	void Update () {
+    public void MaoB(string Animacao)
+    {
+        Mao_B.SetTrigger(Animacao);
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }

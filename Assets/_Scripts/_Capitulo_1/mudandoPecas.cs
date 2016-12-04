@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class mudandoPecas : MonoBehaviour {
 
@@ -26,8 +23,17 @@ public class mudandoPecas : MonoBehaviour {
 
     public AudioManager Effect;
 
+    public TutorialFase1 tutorial_1;
+
+    private bool tuto = true;
+    private bool tuto2 = true;
+    private bool tuto3 = true;
+
+
     void Start()
     {
+        tutorial_1.AtivaFalaA(0);
+
         highlighted.SetActive(false);
         generatePuzzle(Random.Range(0, 11));
         rolagemSprites(0);
@@ -232,6 +238,22 @@ public class mudandoPecas : MonoBehaviour {
             case 0:
                 PainelAviso.SetActive(true);
                 break;
+        }
+
+        if (tuto)
+        {
+            tutorial_1.AtivaFalaA(1);
+            tuto = false;
+        }
+        else if(tuto == false && tuto2)
+        {
+            tutorial_1.AtivaFalaA(2);
+            tuto2 = false;
+        }
+        else if(tuto == false && tuto2 == false && tuto3)
+        {
+            tutorial_1.AtivaFalaA(3);
+            tuto3 = false;
         }
     }
     void checkCompleted()
