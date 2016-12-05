@@ -13,6 +13,7 @@ public class InteractionPuzzleA : MonoBehaviour {
     public AudioManager Effect;
 
     public TutorialFase1 Tutorial1;
+    public TutorialFase1_2 Tutorial2;
 
 
     void Start () {
@@ -93,6 +94,7 @@ public class InteractionPuzzleA : MonoBehaviour {
         StartPuzzle2All();
         byte[] message = System.Text.Encoding.UTF8.GetBytes("startPuzzleB");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
+
     }
     public void StartPuzzle2All()
     {
@@ -107,6 +109,7 @@ public class InteractionPuzzleA : MonoBehaviour {
             _a2Controller.SetActive(true);
             _b2Canvas.SetActive(false);
             _b2Controller.SetActive(false);
+
         }
         else
         {
@@ -120,6 +123,9 @@ public class InteractionPuzzleA : MonoBehaviour {
             _a2Controller.SetActive(false);
             _b2Canvas.SetActive(true);
             _b2Controller.SetActive(true);
+
+            Tutorial2.AtivaFalaB(0);
+
         }
     }
 }

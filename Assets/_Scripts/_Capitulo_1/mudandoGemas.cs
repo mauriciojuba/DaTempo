@@ -23,6 +23,9 @@ public class mudandoGemas : MonoBehaviour {
     bool gemaAtivada;
     Sprite selectedGem;
 
+    private bool tuto = true;
+
+    public TutorialFase1_2 tutorial2;
 
     void Start () {
         LimpaGemas();
@@ -36,6 +39,8 @@ public class mudandoGemas : MonoBehaviour {
     }
     void randomizaEmblema()
     {
+
+
         float random = Random.Range(0, 3);
         if (random < 1)
         {
@@ -103,6 +108,7 @@ public class mudandoGemas : MonoBehaviour {
         gemaAtivada = true;
         highlight.SetActive(true);
         selectedGem = gemaEscolhida;
+
     }
     void desativaGema()
     {
