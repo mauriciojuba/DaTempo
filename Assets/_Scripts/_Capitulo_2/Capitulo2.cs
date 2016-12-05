@@ -45,8 +45,11 @@ public class Capitulo2 : MonoBehaviour {
                 if(testeSujeira) sujarTela();
                 break;
             case "AbrePorta":
-                abrindo = true;
-                DoorHandler();
+                if (!_next)
+                {
+                    abrindo = true;
+                    DoorHandler();
+                }
                 break;
             case "NextLevel":
                 if(_next)nextLevel();

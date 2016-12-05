@@ -1,21 +1,21 @@
 fileFormatVersion: 2
 guid: f0ad5e749ed75514c83c22c7ae2f6df6
-timeCreated: 1480897491
+timeCreated: 1480969145
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: raster_v2_0
-    21300002: raster_v2_1
+    21300000: painel
+    21300002: btn
     21300004: raster_v2_2
-    21300006: raster_v2_3
-    21300008: raster_v2_4
-    21300010: raster_v2_5
-    21300012: raster_v2_6
-    21300014: raster_v2_7
-    21300016: raster_v2_8
-    21300018: raster_v2_9
-    21300020: raster_v2_10
-    21300022: raster_v2_11
+    21300006: btn2
+    21300008: music
+    21300010: option
+    21300012: btn3
+    21300014: yes
+    21300016: no
+    21300018: fio
+    21300020: fio2
+    21300022: fio3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,8 +38,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -65,7 +65,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: raster_v2_0
+      name: painel
       rect:
         serializedVersion: 2
         x: 34
@@ -73,12 +73,12 @@ TextureImporter:
         width: 995
         height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_1
+      name: btn
       rect:
         serializedVersion: 2
         x: 31
@@ -86,7 +86,7 @@ TextureImporter:
         width: 428
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -99,12 +99,12 @@ TextureImporter:
         width: 256
         height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_3
+      name: btn2
       rect:
         serializedVersion: 2
         x: 7
@@ -112,12 +112,12 @@ TextureImporter:
         width: 463
         height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_4
+      name: music
       rect:
         serializedVersion: 2
         x: 487
@@ -125,12 +125,12 @@ TextureImporter:
         width: 259
         height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_5
+      name: option
       rect:
         serializedVersion: 2
         x: 756
@@ -138,12 +138,12 @@ TextureImporter:
         width: 259
         height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_6
+      name: btn3
       rect:
         serializedVersion: 2
         x: 26
@@ -151,12 +151,12 @@ TextureImporter:
         width: 439
         height: 223
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_7
+      name: yes
       rect:
         serializedVersion: 2
         x: 42
@@ -164,12 +164,12 @@ TextureImporter:
         width: 465
         height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_8
+      name: no
       rect:
         serializedVersion: 2
         x: 592
@@ -177,12 +177,12 @@ TextureImporter:
         width: 439
         height: 223
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_9
+      name: fio
       rect:
         serializedVersion: 2
         x: 24
@@ -190,12 +190,12 @@ TextureImporter:
         width: 490
         height: 159
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_10
+      name: fio2
       rect:
         serializedVersion: 2
         x: 670
@@ -203,12 +203,12 @@ TextureImporter:
         width: 279
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: raster_v2_11
+      name: fio3
       rect:
         serializedVersion: 2
         x: 537
@@ -216,7 +216,7 @@ TextureImporter:
         width: 481
         height: 188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

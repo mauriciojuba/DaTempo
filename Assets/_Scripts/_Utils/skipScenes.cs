@@ -16,4 +16,8 @@ public class skipScenes : MonoBehaviour {
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void credits()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }

@@ -12,7 +12,7 @@ using GooglePlayGames.BasicApi.Multiplayer;
 public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 {
     public GameObject ampulheta;
-    public GameObject JogarOff;
+    public Button JogarBtn;
     static NetworkManager sInstance = null;
 
     public AudioManager Effect;
@@ -31,6 +31,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     }
     void Start()
     {
+        JogarBtn.GetComponent<Button>().interactable = false;
         initializeLogTexts();
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
         PlayGamesPlatform.DebugLogEnabled = true;
@@ -45,7 +46,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             if (sucess)
             {
                 GameObject.Find("LoginText").GetComponent<Text>().text = PlayGamesPlatform.Instance.localUser.userName;
-                JogarOff.SetActive(false);
+                JogarBtn.GetComponent<Button>().interactable = true;
 
             }
             else
@@ -72,7 +73,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         else
         {
         }                               
-        GameObject.Find("ConnectingText").GetComponent<Text>().text = "Setting up room (" + ((int)percent) + "%)";
     }
 
     private List<Participant> jogadores;
@@ -132,20 +132,17 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
 
     public void OnParticipantLeft(Participant participant)
     {
-        GameObject.Find("LogText").GetComponent<Text>().text = participant.DisplayName + " ----Left the room";
     }
     public void OnPeersConnected(string[] participantIds)
     {
         foreach (string participantID in participantIds)
         {
-            GameObject.Find("LogText").GetComponent<Text>().text = participantID + " ----Connected the room";
         }
     }
     public void OnPeersDisconnected(string[] participantIds)
     {
         foreach (string participantID in participantIds)
         {
-            GameObject.Find("LogText").GetComponent<Text>().text = participantID + " ----Disconected from the room";
         }
     }
     public void OnLeftRoom()
@@ -155,8 +152,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
     void initializeLogTexts()
     {
         GameObject.Find("LoginText").GetComponent<Text>().text = "";
-        GameObject.Find("LogText").GetComponent<Text>().text = "";
-        GameObject.Find("ConnectingText").GetComponent<Text>().text = "";
     }
     private List<byte> _updateMessage;
 

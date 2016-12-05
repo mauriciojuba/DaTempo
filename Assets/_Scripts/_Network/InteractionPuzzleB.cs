@@ -116,6 +116,6 @@ public class InteractionPuzzleB : MonoBehaviour {
     }
     public void nextLevelAll()
     {
-        SceneManager.LoadScene("Creditos");
+        SceneManager.LoadScene("CutsceneTRES");
     }
 }
