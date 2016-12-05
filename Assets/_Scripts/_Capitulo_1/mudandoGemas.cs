@@ -23,6 +23,10 @@ public class mudandoGemas : MonoBehaviour {
     bool gemaAtivada;
     Sprite selectedGem;
 
+    public GameObject[] Particula;
+    private Vector2 GemasOfset;
+
+
     private bool tuto = true;
 
     public TutorialFase1_2 tutorial2;
@@ -86,20 +90,28 @@ public class mudandoGemas : MonoBehaviour {
                 LimpaSelecao();
                 break;
             case "R":
+                GemasOfset = new Vector2(hR.transform.position.x + 0.6f * hR.transform.localScale.x, hR.transform.position.y + 0.6f * hR.transform.localScale.y);
                 desativaGema();
                 ativaGema(hR,R);
+                Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
                 break;
             case "G":
+                GemasOfset = new Vector2(hG.transform.position.x + 0.6f * hG.transform.localScale.x, hG.transform.position.y + 0.6f * hG.transform.localScale.y);
                 desativaGema();
                 ativaGema(hG, G);
+                Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
                 break;
             case "B":
+                GemasOfset = new Vector2(hB.transform.position.x + 0.6f * hB.transform.localScale.x, hB.transform.position.y + 0.6f * hB.transform.localScale.y);
                 desativaGema();
                 ativaGema(hB, B);
+                Instantiate(Particula[3], GemasOfset, hB.transform.rotation);
                 break;
             case "P":
+                GemasOfset = new Vector2(hP.transform.position.x + 0.6f * hP.transform.localScale.x, hP.transform.position.y + 0.6f * hP.transform.localScale.y);
                 desativaGema();
                 ativaGema(hP, P);
+                Instantiate(Particula[0],GemasOfset,hP.transform.rotation);
                 break;
         }
     }
