@@ -25,7 +25,7 @@ public class TutorialFase2: MonoBehaviour {
     public void AtivaFalaA(int fala)
     {
 
-
+        BloqueiaA.SetActive(true);
 
         FalasJogadorA[fala].SetActive(true);
 
