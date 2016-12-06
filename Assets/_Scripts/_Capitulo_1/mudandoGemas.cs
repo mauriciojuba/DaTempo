@@ -24,7 +24,7 @@ public class mudandoGemas : MonoBehaviour {
     Sprite selectedGem;
 
     public GameObject[] Particula;
-    private Vector2 GemasOfset;
+    private Vector3 GemasOfset;
 
 
     private bool tuto = true;
@@ -71,25 +71,25 @@ public class mudandoGemas : MonoBehaviour {
         switch (obj)
         {
             case "11":
-                GemasOfset = new Vector2(oneOne.gameObject.transform.position.x + 0.6f * oneOne.gameObject.transform.localScale.x, oneOne.gameObject.transform.position.y + 0.6f * oneOne.gameObject.transform.localScale.y);
+                GemasOfset = new Vector3(oneOne.gameObject.transform.position.x + 0.6f * oneOne.gameObject.transform.localScale.x, oneOne.gameObject.transform.position.y + 0.6f * oneOne.gameObject.transform.localScale.y, oneOne.gameObject.transform.position.z +10);
                 LimpaSelecao();
                 selecionaEspaco(oneOne,11);
                 moveGema();
                 break;
             case "12":
-                GemasOfset = new Vector2(oneTwo.gameObject.transform.position.x + 0.6f * oneTwo.gameObject.transform.localScale.x, oneTwo.gameObject.transform.position.y + 0.6f * oneTwo.gameObject.transform.localScale.y);
+                GemasOfset = new Vector3(oneTwo.gameObject.transform.position.x + 0.6f * oneTwo.gameObject.transform.localScale.x, oneTwo.gameObject.transform.position.y + 0.6f * oneTwo.gameObject.transform.localScale.y, oneTwo.gameObject.transform.position.z+10);
                 LimpaSelecao();
                 selecionaEspaco(oneTwo,12);
                 moveGema();
                 break;
             case "21":
-                GemasOfset = new Vector2(twoOne.gameObject.transform.position.x + 0.6f * twoOne.gameObject.transform.localScale.x, twoOne.gameObject.transform.position.y + 0.6f * twoOne.gameObject.transform.localScale.y);
+                GemasOfset = new Vector3(twoOne.gameObject.transform.position.x + 0.6f * twoOne.gameObject.transform.localScale.x, twoOne.gameObject.transform.position.y + 0.6f * twoOne.gameObject.transform.localScale.y, twoOne.gameObject.transform.position.z+10);
                 LimpaSelecao();
                 selecionaEspaco(twoOne,21);
                 moveGema();
                 break;
             case "22":
-                GemasOfset = new Vector2(twoTwo.gameObject.transform.position.x + 0.6f * twoTwo.gameObject.transform.localScale.x, twoTwo.gameObject.transform.position.y + 0.6f * twoTwo.gameObject.transform.localScale.y);
+                GemasOfset = new Vector3(twoTwo.gameObject.transform.position.x + 0.6f * twoTwo.gameObject.transform.localScale.x, twoTwo.gameObject.transform.position.y + 0.6f * twoTwo.gameObject.transform.localScale.y, twoTwo.gameObject.transform.position.z+10);
                 LimpaSelecao();
                 selecionaEspaco(twoTwo,22);
                 moveGema();
@@ -100,25 +100,25 @@ public class mudandoGemas : MonoBehaviour {
                 LimpaSelecao();
                 break;
             case "R":
-                GemasOfset = new Vector2(hR.transform.position.x + 0.6f * hR.transform.localScale.x, hR.transform.position.y + 0.6f * hR.transform.localScale.y);
+                GemasOfset = new Vector3(hR.transform.position.x + 0.6f * hR.transform.localScale.x, hR.transform.position.y + 0.6f * hR.transform.localScale.y, hR.transform.position.z);
                 desativaGema();
                 ativaGema(hR,R);
                 Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
                 break;
             case "G":
-                GemasOfset = new Vector2(hG.transform.position.x + 0.6f * hG.transform.localScale.x, hG.transform.position.y + 0.6f * hG.transform.localScale.y);
+                GemasOfset = new Vector3(hG.transform.position.x + 0.6f * hG.transform.localScale.x, hG.transform.position.y + 0.6f * hG.transform.localScale.y, hG.transform.position.z);
                 desativaGema();
                 ativaGema(hG, G);
                 Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
                 break;
             case "B":
-                GemasOfset = new Vector2(hB.transform.position.x + 0.6f * hB.transform.localScale.x, hB.transform.position.y + 0.6f * hB.transform.localScale.y);
+                GemasOfset = new Vector3(hB.transform.position.x + 0.6f * hB.transform.localScale.x, hB.transform.position.y + 0.6f * hB.transform.localScale.y, hB.transform.position.z);
                 desativaGema();
                 ativaGema(hB, B);
                 Instantiate(Particula[3], GemasOfset, hB.transform.rotation);
                 break;
             case "P":
-                GemasOfset = new Vector2(hP.transform.position.x + 0.6f * hP.transform.localScale.x, hP.transform.position.y + 0.6f * hP.transform.localScale.y);
+                GemasOfset = new Vector3(hP.transform.position.x + 0.6f * hP.transform.localScale.x, hP.transform.position.y + 0.6f * hP.transform.localScale.y, hP.transform.position.z);
                 desativaGema();
                 ativaGema(hP, P);
                 Instantiate(Particula[0],GemasOfset,hP.transform.rotation);
