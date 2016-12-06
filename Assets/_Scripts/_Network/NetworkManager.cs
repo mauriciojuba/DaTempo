@@ -105,8 +105,7 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
                 Destroy(GameObject.Find("AguardandoJogador"));
             }
             //Effect.playSound("EntrouJogador");
-
-            GameObject.Find("ConnectingText").GetComponent<Text>().text = "Sala Criada";
+            
             jogadores = participantes();
             Jogadores.primeiroPlayerID = participantes().First().ParticipantId;
             Jogadores.segundoPlayerID = participantes().Last().ParticipantId;
@@ -118,8 +117,6 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
         }
         else
         {
-            GameObject.Find("ConnectingText").GetComponent<Text>().text = "Falha ao criar a sala";
-            GameObject.Find("CriandoSalaText").GetComponent<Text>().text = "Falhou, Tente de Novo.";
             ampulheta.SetActive(false);
             PlayGamesPlatform.Instance.RealTime.LeaveRoom();
         }
