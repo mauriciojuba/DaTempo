@@ -41,6 +41,8 @@ public class TutorialFase2: MonoBehaviour {
 
         MaozinhaA.SetActive(false);
 
+        BloqueiaA.SetActive(false);
+
         for (int i = 0; i <FalasJogadorA.Length; i++){
             FalasJogadorA[i].SetActive(false);
         }

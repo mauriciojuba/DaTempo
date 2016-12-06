@@ -20,6 +20,9 @@ public class Capitulo2 : MonoBehaviour {
     public bool testeSujeira;
     public bool abrindo;
 
+    public TutorialFase2 tutorial2;
+
+
     void Start () {
         levelSujeira = 0;
         sujeiraSprite.color = new Color(1, 1, 1, 0);
@@ -50,6 +53,7 @@ public class Capitulo2 : MonoBehaviour {
                     abrindo = true;
                     DoorHandler();
                 }
+
                 break;
             case "NextStage":
                 if(_next)nextLevel();
@@ -68,6 +72,7 @@ public class Capitulo2 : MonoBehaviour {
     }
     public void LightsON()
     {
+        tutorial2.AtivaFalaB(2);
         _luz.sprite = luzAcesa;
         _next = true;
         
@@ -94,6 +99,7 @@ public class Capitulo2 : MonoBehaviour {
 	}
     void sujarTela()
     {
+        tutorial2.AtivaFalaB(1);
         onSujeira = true;
         levelSujeira = 1;
     }

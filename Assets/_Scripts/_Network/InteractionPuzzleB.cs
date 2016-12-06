@@ -15,6 +15,10 @@ public class InteractionPuzzleB : MonoBehaviour {
     public GameObject PainelPosFase, textosParabens;
     public Text nomeAmigo;
 
+    public TutorialFase2 Tutorial2;
+
+    private bool abrirPortaPrimeira;
+
     void Start () {
         jogadorA_Control.SetActive(false);
         jogadorB_Control.SetActive(false);
@@ -38,6 +42,9 @@ public class InteractionPuzzleB : MonoBehaviour {
         PainelPosFase.SetActive(false);
         textosParabens.SetActive(false);
         splitscreen();
+
+
+
     }
 
     private void splitscreen()
@@ -47,6 +54,8 @@ public class InteractionPuzzleB : MonoBehaviour {
             jogadorA_Control.SetActive(true);
             jogadorB_Control.SetActive(false);
 
+            Tutorial2.AtivaFalaA(0);
+
 			Music.playSound ("PUZZLE 2 PASSADO");
 
         }
@@ -54,6 +63,8 @@ public class InteractionPuzzleB : MonoBehaviour {
         {
             jogadorA_Control.SetActive(false);
             jogadorB_Control.SetActive(true);
+
+            Tutorial2.AtivaFalaB(0);
 
 			Music.playSound ("PUZZLE 2 FUTURO");
 
@@ -102,6 +113,10 @@ public class InteractionPuzzleB : MonoBehaviour {
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
     public void received_openDoor() {
+        if (abrirPortaPrimeira == false) {
+            Tutorial2.AtivaFalaA(2);
+            abrirPortaPrimeira = true;
+        }
         _open.open = true;
     }
     public void received_closeDoor()
