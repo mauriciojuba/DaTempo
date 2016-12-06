@@ -2,69 +2,111 @@
 using System.Collections;
 using TouchScript.Gestures;
 
-public class FioSnap : MonoBehaviour {
+public class FioSnap : MonoBehaviour
+{
 
-	private TransformGesture Tc;
-	public int Numero;
-	public GameObject[] Entrada;
-	public GameObject SelectVisualizer;
-	public Vector3 PosInicial;
-	public bool Select = false;
-	bool BusySlot;
+    private TransformGesture Tc;
+    public GameObject SelectVisualizer;
+    Vector3 PosInicial;
+    public bool Select = false;
     GameManager Controller;
+    public int atrelado;
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         Controller = GameObject.Find("GameControl").GetComponent<GameManager>();
         PosInicial = gameObject.transform.position;
-		
-		Tc = gameObject.GetComponent<TransformGesture>();
-	}
+        atrelado = 0;
+        Tc = gameObject.GetComponent<TransformGesture>();
+    }
+    public void ResetPos()
+    {
+        gameObject.transform.position = PosInicial;
+        atrelado = 0;
+    }
 
-	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
 
-		if (Select)
-			SelectVisualizer.SetActive (true);
-		else
-			SelectVisualizer.SetActive (false);
-	}
+        if (Select)
+            SelectVisualizer.SetActive(true);
+        else
+            SelectVisualizer.SetActive(false);
 
-	int CheckEntrada(GameObject hit){
-		for (int i = 0; i < Entrada.Length; i++) {
-			if (Entrada [i] == hit) {
-				return (i);
-			}
-		}
-		return (-1);
-	}
+        if(atrelado == 1) Controller.a = true;
+        else if (atrelado == 2) Controller.b = true;
+        else if (atrelado == 3) Controller.c = true;
 
-	void OnTriggerEnter2D(Collider2D hit){
+        Debug.Log(gameObject.name + "  " + atrelado);
+    }
+    public void desatrelar()
+    {
+        if (atrelado == 1)
+        {
+            Controller.a = false;
+            ResetPos();
+        }
+        else if (atrelado == 2)
+        {
+            Controller.b = false;
+            ResetPos();
+        }
+        else if (atrelado == 3)
+        {
+            Controller.c = false;
+            ResetPos();
+        }
+        atrelado = 0;
+    }
 
-		if (hit.gameObject.name == "nope") {
-			gameObject.transform.position = PosInicial;
-			Tc.Cancel();
-		}
-		if (hit.gameObject.tag == "snap") {
-			Tc.Cancel();
-			if (Controller.CurrentButtons [CheckEntrada (hit.gameObject)] == "None") {
-				gameObject.transform.position = hit.gameObject.transform.position;
-                if (hit.gameObject == Entrada[Numero])
-                    Controller.AddCheck(CheckEntrada(hit.gameObject));
-                else
+    void OnTriggerEnter2D(Collider2D hit)
+    {
+
+        if (hit.gameObject.name == "nope")
+        {
+            gameObject.transform.position = PosInicial;
+            Tc.Cancel();
+        }
+        if (hit.gameObject.tag == "snap")
+        {
+            Tc.Cancel();
+            if (hit.gameObject.name == "A")
+            {
+                if (Controller.a == false)
                 {
-                    Controller.AddWrong(CheckEntrada(hit.gameObject));
+                    gameObject.transform.position = hit.gameObject.transform.position;
+                    desatrelar();
+                    atrelado = 1;
+                    Controller.Add(hit.gameObject.name);
                 }
-
+                else ResetPos();
             }
-            else {
-				gameObject.transform.position = PosInicial;
-			}
-		}
+            if (hit.gameObject.name == "B")
+            {
+                if (Controller.b == false)
+                {
+                    gameObject.transform.position = hit.gameObject.transform.position;
+                    desatrelar();
+                    atrelado = 2;
+                    Controller.Add(hit.gameObject.name);
+                }
+                else ResetPos();
+            }
+            if (hit.gameObject.name == "C")
+            {
+                if (Controller.c == false)
+                {
+                    gameObject.transform.position = hit.gameObject.transform.position;
+                    desatrelar();
+                    atrelado = 3;
+                    Controller.Add(hit.gameObject.name);
+                }
+                else ResetPos();
+            }
+        }
+
     }
-	void OnTriggerExit2D(Collider2D hit){
-		if (hit.gameObject.tag == "snap")
-			Controller.Remove(CheckEntrada(hit.gameObject));
-    }
+
 }

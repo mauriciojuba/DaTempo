@@ -17,7 +17,8 @@ public class ControladorDeFusil : MonoBehaviour {
 				fusil [i].GetComponent<FioSnap> ().Select = false;
 				if (name == fusil [i].name) {
 					fusil [i].GetComponent<FioSnap> ().Select = true;
-				}
+                    //fusil[i].GetComponent<FioSnap>().desatrelar();
+                }
 			}
 		}
 
