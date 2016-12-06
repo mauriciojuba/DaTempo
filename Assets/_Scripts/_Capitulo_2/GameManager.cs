@@ -8,82 +8,92 @@ public class GameManager : MonoBehaviour {
 	int[] Checklist = new int[3];
 	public string[] CurrentButtons = new string[] {"None","None","None"};
 	public string[] RightButtons = new string[] {"Check","Check","Check"};
-
+    bool a, b, c;
 	public GameObject[] Fusiveis;
 
     public AudioManager Effect;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void AddCheck(int Number){
         Effect.playSound("ColocaFusivel");
-		print("Funfa vem " + Number);
 		CurrentButtons[Number] = "Check";
-		print (Check ());
-	}
+        if (Number == 0) a = true;
+        if (Number == 1) b = true;
+        if (Number == 2) c = true;
+        isComplete();
+    }
 
-	public void RemoveCheck(int Number){
-        Effect.playSound("TiraFusivel");
-        print ("Saiu " + Number);
-		CurrentButtons[Number] = "None";
-		print (Check ());
-	}
+    void isComplete()
+    {
+        if (a&&b&&c){
+            Check();
+        }
+    }
 
 	public void AddWrong(int Number){
         Effect.playSound("ColocaFusivel");
-        print ("Ta errado "+ Number);
 		CurrentButtons [Number] = "Wrong";
-		print (Check ());
-	}
+        if (Number == 0) a = true;
+        if (Number == 1) b = true;
+        if (Number == 2) c = true;
+        isComplete();
+    }
 
-	public void RemoveWrong(int Number){
+	public void Remove(int Number){
         Effect.playSound("TiraFusivel");
-        print("saiu do errado " + Number);
 		CurrentButtons [Number] = "None";
-		print (Check ());
-	}
-
-
-	string Check(){
-		for (int i = 0; i < CurrentButtons.Length; i++) {
-			if(CurrentButtons[i].Equals("None")){
-				return("Meh");
-			}
-		}
-		for (int i = 0; i < CurrentButtons.Length; i++) {
-			if(CurrentButtons[i].Equals("Wrong")){
-                Effect.playSound("PainelErro");
-				Reset ();
-                _unet._graxa();
-                return ("Wrong");
-			}
-		}
-        Effect.playSound("PainelAcerto");
-        _unet.received_closeDoor();
-        _unet.lightON();
-		return("Correct");
-
-
-
-	}
+        if (Number == 0) a = false;
+        if (Number == 1) b = false;
+        if (Number == 2) c = false;
+    }
+    
+	void Check(){
+        if(CurrentButtons == RightButtons)
+        {
+            Effect.playSound("PainelAcerto");
+            _unet.received_closeDoor();
+            _unet.lightON();
+        }
+        else
+        {
+            Effect.playSound("PainelErro");
+            Reset();
+            _unet._graxa();
+        }
+        //for (int i = 0; i < CurrentButtons.Length; i++)
+        //{
+        //    if (CurrentButtons[i].Equals("None"))
+        //    {
+        //        //nao acontece nada
+        //    }
+        //}
+        //for (int i = 0; i < CurrentButtons.Length; i++)
+        //{
+        //    if (CurrentButtons[i].Equals("Wrong"))
+        //    {
+        //        //ta errado
+        //        Effect.playSound("PainelErro");
+        //        Reset();
+        //        _unet._graxa();
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
+        //Effect.playSound("PainelAcerto");
+        //_unet.received_closeDoor();
+        //_unet.lightON();
+        //return ("Correct");
+    }
 
 	public void Reset(){
         //tira vida
 		for (int i = 0; i < CurrentButtons.Length; i++) { 
 			CurrentButtons[i] = "None";
 		}
-
 		for (int i = 0; i < Fusiveis.Length; i++) { 
 			Fusiveis [i].GetComponent<FioSnap> ().transform.position = Fusiveis [i].GetComponent<FioSnap> ().PosInicial;
-
 		}
 	}
 }

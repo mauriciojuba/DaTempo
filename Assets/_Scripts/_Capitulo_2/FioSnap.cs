@@ -11,13 +11,13 @@ public class FioSnap : MonoBehaviour {
 	public Vector3 PosInicial;
 	public bool Select = false;
 	bool BusySlot;
+    GameManager Controller;
 
 
-
-	// Use this for initialization
-	void Start () {
-
-		PosInicial = gameObject.transform.position;
+    // Use this for initialization
+    void Start () {
+        Controller = GameObject.Find("GameControl").GetComponent<GameManager>();
+        PosInicial = gameObject.transform.position;
 		
 		Tc = gameObject.GetComponent<TransformGesture>();
 	}
@@ -47,36 +47,24 @@ public class FioSnap : MonoBehaviour {
 			Tc.Cancel();
 		}
 		if (hit.gameObject.tag == "snap") {
-			GameManager Controller = GameObject.Find ("GameControl").GetComponent<GameManager> ();
 			Tc.Cancel();
 			if (Controller.CurrentButtons [CheckEntrada (hit.gameObject)] == "None") {
 				gameObject.transform.position = hit.gameObject.transform.position;
-							
-			} else {
-				gameObject.transform.position = PosInicial;
-				BusySlot = true;
-				return;
-			}
-				
-			if (hit.gameObject == Entrada [Numero])
-				Controller.AddCheck (CheckEntrada(hit.gameObject));
-			else {
-				Controller.AddWrong (CheckEntrada(hit.gameObject));
-			}
-				
+                if (hit.gameObject == Entrada[Numero])
+                    Controller.AddCheck(CheckEntrada(hit.gameObject));
+                else
+                {
+                    Controller.AddWrong(CheckEntrada(hit.gameObject));
+                }
 
+            }
+            else {
+				gameObject.transform.position = PosInicial;
+			}
 		}
-	}
+    }
 	void OnTriggerExit2D(Collider2D hit){
-		GameManager Controller = GameObject.Find ("GameControl").GetComponent<GameManager> ();
-		if (BusySlot) {
-			BusySlot = false;
-			return;
-		} 
-		if (hit.gameObject.tag == "snap" && hit.gameObject == Entrada [Numero])
-			Controller.RemoveCheck(CheckEntrada(hit.gameObject));
-		else{
-			Controller.RemoveWrong(CheckEntrada(hit.gameObject));			
-		}
-		}
+		if (hit.gameObject.tag == "snap")
+			Controller.Remove(CheckEntrada(hit.gameObject));
+    }
 }
