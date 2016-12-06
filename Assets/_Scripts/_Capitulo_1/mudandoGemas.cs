@@ -40,7 +40,13 @@ public class mudandoGemas : MonoBehaviour {
     void OnEnable() {
 
         lifeCount = puzzle1.lifecount;
+        tutorial2.AtivaFalaA(0);
+        
     }
+    void OnDisable() {
+        tutorial2.DesativaFalaA();
+    }
+
     void randomizaEmblema()
     {
 
@@ -65,21 +71,25 @@ public class mudandoGemas : MonoBehaviour {
         switch (obj)
         {
             case "11":
+                GemasOfset = new Vector2(oneOne.gameObject.transform.position.x + 0.6f * oneOne.gameObject.transform.localScale.x, oneOne.gameObject.transform.position.y + 0.6f * oneOne.gameObject.transform.localScale.y);
                 LimpaSelecao();
                 selecionaEspaco(oneOne,11);
                 moveGema();
                 break;
             case "12":
+                GemasOfset = new Vector2(oneTwo.gameObject.transform.position.x + 0.6f * oneTwo.gameObject.transform.localScale.x, oneTwo.gameObject.transform.position.y + 0.6f * oneTwo.gameObject.transform.localScale.y);
                 LimpaSelecao();
                 selecionaEspaco(oneTwo,12);
                 moveGema();
                 break;
             case "21":
+                GemasOfset = new Vector2(twoOne.gameObject.transform.position.x + 0.6f * twoOne.gameObject.transform.localScale.x, twoOne.gameObject.transform.position.y + 0.6f * twoOne.gameObject.transform.localScale.y);
                 LimpaSelecao();
                 selecionaEspaco(twoOne,21);
                 moveGema();
                 break;
             case "22":
+                GemasOfset = new Vector2(twoTwo.gameObject.transform.position.x + 0.6f * twoTwo.gameObject.transform.localScale.x, twoTwo.gameObject.transform.position.y + 0.6f * twoTwo.gameObject.transform.localScale.y);
                 LimpaSelecao();
                 selecionaEspaco(twoTwo,22);
                 moveGema();
@@ -148,12 +158,20 @@ public class mudandoGemas : MonoBehaviour {
                     oneOne.sprite = selectedGem;
                     _A = selectedGem.name;
                     _a = true;
+                    if(selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if(selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     LimpaSelecao();
                     break;
                 case 12:
                     oneTwo.sprite = selectedGem;
                     _B = selectedGem.name;
                     _b = true;
+                    if (selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if (selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     LimpaSelecao();
                     break;
                 case 21:
@@ -161,12 +179,20 @@ public class mudandoGemas : MonoBehaviour {
                     _C = selectedGem.name;
                     _c = true;
                     LimpaSelecao();
+                    if (selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if (selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     break;
                 case 22:
                     twoTwo.sprite = selectedGem;
                     _D = selectedGem.name;
                     _d = true;
                     LimpaSelecao();
+                    if (selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if (selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     break;
             }
             desativaGema();
