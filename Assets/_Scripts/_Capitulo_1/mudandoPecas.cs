@@ -24,6 +24,7 @@ public class mudandoPecas : MonoBehaviour {
     public AudioManager Effect;
 
     public TutorialFase1 tutorial_1;
+    public TutorialFase1_2 tutorial_2;
 
     private bool tuto = true;
     private bool tuto2 = true;
@@ -242,7 +243,7 @@ public class mudandoPecas : MonoBehaviour {
 
         if (tuto)
         {
-            tutorial_1.AtivaFalaA(1);
+        //    tutorial_1.AtivaFalaA(1);
             tuto = false;
         }
         else if(tuto == false && tuto2)
@@ -278,6 +279,7 @@ public class mudandoPecas : MonoBehaviour {
         if(my_combination == combination || my_combination == ot_combination)
         {
             Effect.playSound("PainelAcerto");
+            tutorial_2.AtivaFalaA(0);
             _netCom.StartPuzzle2();
         }
         else

@@ -158,20 +158,20 @@ public class mudandoGemas : MonoBehaviour {
                     oneOne.sprite = selectedGem;
                     _A = selectedGem.name;
                     _a = true;
-                    if(selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
-                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
-                    else if(selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
-                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
+                    if(_A == P.name) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (_A == G.name) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if(_A == R.name) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (_A == B.name) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     LimpaSelecao();
                     break;
                 case 12:
                     oneTwo.sprite = selectedGem;
                     _B = selectedGem.name;
                     _b = true;
-                    if (selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
-                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
-                    else if (selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
-                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
+                    if (_B == P.name) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (_B == G.name) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if (_B == R.name) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (_B == B.name) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     LimpaSelecao();
                     break;
                 case 21:
@@ -179,20 +179,20 @@ public class mudandoGemas : MonoBehaviour {
                     _C = selectedGem.name;
                     _c = true;
                     LimpaSelecao();
-                    if (selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
-                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
-                    else if (selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
-                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
+                    if (_C == P.name) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (_C == G.name) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if (_C == R.name) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (_C == B.name) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     break;
                 case 22:
                     twoTwo.sprite = selectedGem;
                     _D = selectedGem.name;
                     _d = true;
                     LimpaSelecao();
-                    if (selectedGem == P) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
-                    else if (selectedGem == G) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
-                    else if (selectedGem == R) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
-                    else if (selectedGem == B) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
+                    if (_D == P.name) Instantiate(Particula[0], GemasOfset, hP.transform.rotation);
+                    else if (_D == G.name) Instantiate(Particula[1], GemasOfset, hG.transform.rotation);
+                    else if (_D == R.name) Instantiate(Particula[2], GemasOfset, hR.transform.rotation);
+                    else if (_D == B.name) Instantiate(Particula[3], GemasOfset, hG.transform.rotation);
                     break;
             }
             desativaGema();
