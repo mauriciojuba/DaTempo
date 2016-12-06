@@ -229,6 +229,18 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "tiraVida2":
                 GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().diminuiVida();
                 break;
+            #endregion
+            #region cutscenes
+            case "pularCutUm":
+                GameObject.Find("Cutscene").GetComponent<cutscene>().nextLevelAll();
+                break;
+            case "pularCutDois":
+                GameObject.Find("Cutscene").GetComponent<cutscene>().cutscene2All();
+                break;
+            case "pularCutTres":
+                GameObject.Find("Cutscene").GetComponent<cutscene>().creditosAll();
+                break;
+
                 #endregion
         }
     }
