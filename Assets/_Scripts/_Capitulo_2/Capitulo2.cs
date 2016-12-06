@@ -51,7 +51,7 @@ public class Capitulo2 : MonoBehaviour {
                     DoorHandler();
                 }
                 break;
-            case "NextLevel":
+            case "NextStage":
                 if(_next)nextLevel();
                 break;
         }
