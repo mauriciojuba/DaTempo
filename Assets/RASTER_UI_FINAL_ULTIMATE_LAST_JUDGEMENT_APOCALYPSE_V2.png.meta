@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 4faee39a8f6010044a5a392359b15c98
+timeCreated: 1481080212
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Painel_Light0
+    21300002: Painel_Dark0
+    21300004: xtella_=o2
+    21300006: xtella_s22
+    21300008: xtella_none
+    21300010: xtella_happy2
+    21300012: RASTER_UI_FINAL_ULTIMATE_LAST_JUDGEMENT_APOCALYPSE_V2_6
+    21300014: RASTER_UI_FINAL_ULTIMATE_LAST_JUDGEMENT_APOCALYPSE_V2_7
+    21300016: xtella_happy
+    21300018: RASTER_UI_FINAL_ULTIMATE_LAST_JUDGEMENT_APOCALYPSE_V2_9
+    21300020: xtella_=o
+    21300022: Text_Jogar
+    21300024: Painel_Light1
+    21300026: xtella_s2
+    21300028: Text_Pular
+    21300030: BG_blackwhite
+    21300032: Text_Creditos
+    21300034: Text_Sair
+    21300036: Text_OK
+    21300038: Text_Sim
+    21300040: Text_Nao
+    21300042: Btn_0
+    21300044: Btn_1
+    21300046: Btn_Yes
+    21300048: Painel_Blue
+    21300050: Btn_No
+    21300052: Btn_Music
+    21300054: Btn_Options
+    21300056: Btn_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 140
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Painel_Light0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1657
+        width: 761
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Painel_Dark0
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1653
+        width: 760
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_=o2
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 1832
+        width: 148
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_s22
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 1843
+        width: 147
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_none
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 1680
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_happy2
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 1682
+        width: 146
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RASTER_UI_FINAL_ULTIMATE_LAST_JUDGEMENT_APOCALYPSE_V2_6
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1634
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RASTER_UI_FINAL_ULTIMATE_LAST_JUDGEMENT_APOCALYPSE_V2_7
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1634
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_happy
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1494
+        width: 144
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RASTER_UI_FINAL_ULTIMATE_LAST_JUDGEMENT_APOCALYPSE_V2_9
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 1635
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_=o
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1494
+        width: 144
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_Jogar
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1524
+        width: 283
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Painel_Light1
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 660
+        width: 548
+        height: 923
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: xtella_s2
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1494
+        width: 144
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_Pular
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1422
+        width: 286
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BG_blackwhite
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 18
+        width: 810
+        height: 1440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_Creditos
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1326
+        width: 291
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_Sair
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1214
+        width: 214
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_OK
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1202
+        width: 179
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_Sim
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1077
+        width: 194
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Text_Nao
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1089
+        width: 204
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 867
+        width: 373
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 652
+        width: 379
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_Yes
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 432
+        width: 371
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Painel_Blue
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 423
+        width: 541
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_No
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 230
+        width: 363
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_Music
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 24
+        width: 174
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_Options
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 25
+        width: 174
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Btn_2
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 19
+        width: 336
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

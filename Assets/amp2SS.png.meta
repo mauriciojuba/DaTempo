@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: a09aa6f83cf65da41b0489662adfe067
+timeCreated: 1481085222
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: amp2SS_0
+    21300002: amp2SS_1
+    21300004: amp2SS_2
+    21300006: amp2SS_3
+    21300008: amp2SS_4
+    21300010: amp2SS_5
+    21300012: amp2SS_6
+    21300014: amp2SS_7
+    21300016: amp2SS_8
+    21300018: amp2SS_9
+    21300020: amp2SS_10
+    21300022: amp2SS_11
+    21300024: amp2SS_12
+    21300026: amp2SS_13
+    21300028: amp2SS_14
+    21300030: amp2SS_15
+    21300032: amp2SS_16
+    21300034: amp2SS_17
+    21300036: amp2SS_18
+    21300038: amp2SS_19
+    21300040: amp2SS_20
+    21300042: amp2SS_21
+    21300044: amp2SS_22
+    21300046: amp2SS_23
+    21300048: amp2SS_24
+    21300050: amp2SS_25
+    21300052: amp2SS_26
+    21300054: amp2SS_27
+    21300056: amp2SS_28
+    21300058: amp2SS_29
+    21300060: amp2SS_30
+    21300062: amp2SS_31
+    21300064: amp2SS_32
+    21300066: amp2SS_33
+    21300068: amp2SS_34
+    21300070: amp2SS_35
+    21300072: amp2SS_36
+    21300074: amp2SS_37
+    21300076: amp2SS_38
+    21300078: amp2SS_39
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 120
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: amp2SS_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_1
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_2
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_3
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_4
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_5
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_6
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_7
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1030
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_8
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_10
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_11
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_12
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_13
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_14
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 774
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_15
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 768
+        width: 250
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 531
+        width: 256
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_17
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 512
+        width: 250
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_18
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 523
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_19
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 523
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_20
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 523
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_21
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 523
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_22
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 523
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_23
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_24
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_25
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_26
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_27
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_28
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_29
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_30
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 267
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_31
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 11
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_32
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 11
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_33
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 11
+        width: 168
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 251
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_35
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 22
+        width: 253
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_36
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 21
+        width: 253
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_37
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 249
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_38
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 6
+        width: 169
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: amp2SS_39
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 532
+        width: 256
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
