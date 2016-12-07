@@ -19,10 +19,27 @@ public class canoVapor : MonoBehaviour {
     public void diminuiVida()
     {
         lifecount--;
-        if(lifecount == 2) vida3.SetActive(false);
-        if(lifecount == 1) vida2.SetActive(false);
-        if(lifecount == 0) vida1.SetActive(false);
-        if (lifecount == -1) lifecount = 3;
+        if (lifecount == 2)
+        {
+            vida3.SetActive(false);
+            //particulas
+        }
+        if (lifecount == 1)
+        {
+            vida2.SetActive(false);
+            //particulas
+        }
+        if (lifecount == 0)
+        {
+            vida1.SetActive(false);
+            //particulas
+        }
+        if (lifecount == -1)
+        {
+            lifecount = 3;
+            //particulas
+            //gameover
+        }
     }
 
     void Start()

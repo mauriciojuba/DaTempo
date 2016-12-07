@@ -226,13 +226,16 @@ public class mudandoGemas : MonoBehaviour {
                         vida3.SetActive(false);
                         vida2.SetActive(false);
                         vida1.SetActive(false);
+                        //particulas
                         break;
                     case 1:
                         vida3.SetActive(false);
                         vida2.SetActive(false);
+                        //particulas
                         break;
                     case 2:
                         vida3.SetActive(false);
+                        //particulas
                         break;
                 }
             }
