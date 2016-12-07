@@ -56,7 +56,7 @@ public class Capitulo2 : MonoBehaviour {
 
                 break;
             case "NextStage":
-                if(_next)nextLevel();
+                if(_next) proxFase();
                 break;
         }
     }
@@ -68,15 +68,13 @@ public class Capitulo2 : MonoBehaviour {
     void proxFase()
     {
         _btn.sprite = btnAtivo;
-        Invoke("nextLevel", 1f);
+        Invoke("nextLevel", 0.5f);
     }
     public void LightsON()
     {
         tutorial2.AtivaFalaB(2);
         _luz.sprite = luzAcesa;
         _next = true;
-        
-
     }
     public void DoorHandler()
     {

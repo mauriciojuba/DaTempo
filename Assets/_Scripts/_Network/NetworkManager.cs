@@ -229,6 +229,9 @@ public class NetworkManager : MonoBehaviour, RealTimeMultiplayerListener
             case "tiraVida2":
                 GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().diminuiVida();
                 break;
+            case "nextLevel3":
+                GameObject.Find("Main Camera").GetComponent<InteractionPuzzleB>().nextLevelAll();
+                break;
             #endregion
             #region cutscenes
             case "pularCutUm":

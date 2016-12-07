@@ -126,7 +126,7 @@ public class InteractionPuzzleB : MonoBehaviour {
     public void nextLevel()
     {
         nextLevelAll();
-        byte[] message = System.Text.Encoding.UTF8.GetBytes("closeDoor");
+        byte[] message = System.Text.Encoding.UTF8.GetBytes("nextLevel3");
         PlayGamesPlatform.Instance.RealTime.SendMessageToAll(true, message);
     }
     public void nextLevelAll()
