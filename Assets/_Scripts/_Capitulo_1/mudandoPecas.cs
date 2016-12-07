@@ -30,6 +30,9 @@ public class mudandoPecas : MonoBehaviour {
     private bool tuto2 = true;
     private bool tuto3 = true;
 
+    public GameObject Particula;
+    private Vector3 PlacaOfset;
+
 
     void Start()
     {
@@ -91,6 +94,8 @@ public class mudandoPecas : MonoBehaviour {
     void ativaSelecaoPeca()
     {
         Effect.playSound("EspacoPlaca");
+        PlacaOfset = new Vector3(highlighted.gameObject.transform.position.x + 0.6f * highlighted.gameObject.transform.localScale.x, highlighted.gameObject.transform.position.y + 0.6f * highlighted.gameObject.transform.localScale.y, highlighted.gameObject.transform.position.z + 10);
+        Instantiate(Particula, PlacaOfset, highlighted.transform.rotation);
         pecaAtivada = true;
         highlighted.SetActive(true);
     }
@@ -202,6 +207,8 @@ public class mudandoPecas : MonoBehaviour {
         {
             case 11:
                 clearSelection();
+                PlacaOfset = new Vector3(oneOne.gameObject.transform.position.x + 0.6f * oneOne.gameObject.transform.localScale.x, oneOne.gameObject.transform.position.y + 0.6f * oneOne.gameObject.transform.localScale.y, oneOne.gameObject.transform.position.z + 10);
+                Instantiate(Particula, PlacaOfset, oneOne.gameObject.transform.rotation);
                 oneOne.sprite = pecaSelecionada.sprite;
                 oneOne.color = ok;
                 _a = true;
@@ -211,6 +218,8 @@ public class mudandoPecas : MonoBehaviour {
                 break;
             case 12:
                 clearSelection();
+                PlacaOfset = new Vector3(oneTwo.gameObject.transform.position.x + 0.6f * oneTwo.gameObject.transform.localScale.x, oneTwo.gameObject.transform.position.y + 0.6f * oneTwo.gameObject.transform.localScale.y, oneTwo.gameObject.transform.position.z + 10);
+                Instantiate(Particula, PlacaOfset, oneTwo.gameObject.transform.rotation);
                 oneTwo.sprite = pecaSelecionada.sprite;
                 oneTwo.color = ok;
                 _b = true;
@@ -220,6 +229,8 @@ public class mudandoPecas : MonoBehaviour {
                 break;
             case 21:
                 clearSelection();
+                PlacaOfset = new Vector3(twoOne.gameObject.transform.position.x + 0.6f * twoOne.gameObject.transform.localScale.x, twoOne.gameObject.transform.position.y + 0.6f * twoOne.gameObject.transform.localScale.y, twoOne.gameObject.transform.position.z + 10);
+                Instantiate(Particula, PlacaOfset, twoOne.gameObject.transform.rotation);
                 twoOne.sprite = pecaSelecionada.sprite;
                 twoOne.color = ok;
                 _c = true;
@@ -229,6 +240,8 @@ public class mudandoPecas : MonoBehaviour {
                 break;
             case 22:
                 clearSelection();
+                PlacaOfset = new Vector3(twoTwo.gameObject.transform.position.x + 0.6f * twoTwo.gameObject.transform.localScale.x, twoTwo.gameObject.transform.position.y + 0.6f * twoTwo.gameObject.transform.localScale.y, twoTwo.gameObject.transform.position.z + 10);
+                Instantiate(Particula, PlacaOfset, twoTwo.gameObject.transform.rotation);
                 twoTwo.sprite = pecaSelecionada.sprite;
                 twoTwo.color = ok;
                 _d = true;
